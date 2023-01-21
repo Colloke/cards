@@ -1,0 +1,17 @@
+.cards {
+  --d: 10s; /* duration */
+  place-content: center;
+  display: grid;
+  width: 220px;
+}
+
+.cards > img {
+  grid-area: 1/1;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  animation: slide var(--d) infinite;
+  border-radius: 15px;
+}
