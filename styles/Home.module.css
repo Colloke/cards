@@ -8,21 +8,22 @@
 }
 
 .container > img {
- --width: 10em;
- --height: calc(var(--width) * 1.4);
- width: var(--width);
- height: var(--height);
- object-fit: cover;
- border: 10px solid #f2f2f2;
- box-shadow: 0 0 4px #0007;
- border-radius: 15px;
- position: absolute;
- left: 40%;
- top: 30%;
+  --width: 10em;
+  --height: calc(var(--width) * 1.4);
+  width: var(--width);
+  height: var(--height);
+  object-fit: cover;
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  border-radius: 15px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  transition: 0.5s;
 }
 
 .container:hover > .card3 {
- transform: translate(-40px) rotate(-10deg);
+  transform: translate(-40px) rotate(-10deg);
 }
 
 .container:hover > .card2 {
