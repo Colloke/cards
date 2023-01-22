@@ -1,0 +1,25 @@
+.cards > * {
+  --width: 10em;
+  --height: calc(var(--width) * 1.4);
+  width: var(--width);
+  height: var(--height);
+ }
+
+.card:first-child {
+}
+.card:nth-child(2) {
+}
+.card:nth-child(3) {
+}
+.card:nth-child(4) {
+}
+.card:nth-child(5) {
+}
+
+.cards > img {
+object-fit: cover;
+aspect-ratio: 1;
+border: 10px solid #f2f2f2;
+box-shadow: 0 0 4px #0007;
+border-radius: 15px;
+}
