@@ -17,27 +17,17 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   position: absolute;
-  left: 35%;
-  top: 25%;
+  top: 20%;
+  left: 36.5%;
   transition: 0.5s;
 }
 
 .card1 {
-  translate: -85%;
-  rotate: -5deg;
+  transform: translate(90%) rotate(10deg) translateY(5%);
 }
 
-.container:hover > .card2 {
-  transform: translate(40px) rotate(10deg);
-}
-
-.container:hover > .card3 {
-  transform: translate(-40px) rotate(-10deg);
-}
-
-.card4 {
-  translate: 85%;
-  rotate: 5deg;
+.card2 {
+  transform: translate(-90%) rotate(-10deg) translateY(5%);
 }
 
 .arrows {
