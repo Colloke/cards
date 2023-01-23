@@ -49,3 +49,11 @@
   left: 275px;
   top: 400px;
 }
+
+.arrowright:hover {
+  border-left: 15px solid grey;
+}
+
+.arrowleft:hover {
+  border-right: 15px solid grey;
+}
