@@ -31,16 +31,21 @@
 }
 
 .arrows {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
+  width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+  position: absolute;
 }
 
-.right {
-  transform: translate(1100%) rotate(-45deg);
+.arrowright {
+	border-left: 15px solid white;
+  right: 400px;
+  top: 400px;  
 }
 
-.left {
-  transform: translate(200%) rotate(135deg);
+.arrowleft {
+	border-right: 15px solid white; 
+  left: 275px;
+  top: 400px;
 }
