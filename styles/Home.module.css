@@ -8,7 +8,7 @@
 }
 
 .container > img {
-  --width: 10em;
+  --width: 20em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
@@ -17,15 +17,40 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   position: absolute;
-  left: 40%;
-  top: 30%;
+  left: 35%;
+  top: 25%;
   transition: 0.5s;
+}
+
+.card1 {
+  translate: -85%;
+  rotate: -5deg;
+}
+
+.container:hover > .card2 {
+  transform: translate(40px) rotate(10deg);
 }
 
 .container:hover > .card3 {
   transform: translate(-40px) rotate(-10deg);
 }
 
-.container:hover > .card2 {
-  transform: translate(40px) rotate(10deg);
+.card4 {
+  translate: 85%;
+  rotate: 5deg;
+}
+
+.arrows {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: translate(100px) rotate(10deg);
+}
+
+.left {
+  transform: translate(100px) rotate(10deg);
 }
