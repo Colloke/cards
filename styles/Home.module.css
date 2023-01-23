@@ -48,9 +48,9 @@
 }
 
 .right {
-  transform: translate(100px) rotate(10deg);
+  transform: translate(1100%) rotate(-45deg);
 }
 
 .left {
-  transform: translate(100px) rotate(10deg);
+  transform: translate(200%) rotate(135deg);
 }
