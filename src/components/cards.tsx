@@ -89,15 +89,15 @@ const Cards = ({ slides }: { slides:any }) => {
     </section>
     </>
    )
-}
+} 
 
 {/* 
-
           TO-DO
         1: Make Gif animation only play when card is active
         2: Fix Mobile
         3: Add proper text to cards
-        4: add animation to text
+        4: add animation to text and make text match card
+        5: make card animation
 */}
 
 export default Cards;
