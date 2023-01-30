@@ -23,6 +23,27 @@ const Cards = ({ slides }: { slides:any }) => {
     <section className={styles.container}>
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+    
+    {cardData.map((card, index) => {
+      return (
+        <div className={index === current ? 'slide active' : 'slide'} key={index}>
+          {index === current && (
+          <img src={card.image} alt='Card 1' className={styles.card} />
+          )}
+        </div>
+      )
+    })}
+
+    {cardData.map((card, index) => {
+      return (
+        <div className={index === current ? 'slide active' : 'slide'} key={index}>
+          {index === current && (
+          <img src={card.image} alt='Card 1' className={styles.card} />
+          )}
+        </div>
+      )
+    })}
+
     {cardData.map((card, index) => {
       return (
         <div className={index === current ? 'slide active' : 'slide'} key={index}>
