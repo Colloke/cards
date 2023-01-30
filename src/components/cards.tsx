@@ -91,4 +91,13 @@ const Cards = ({ slides }: { slides:any }) => {
    )
 }
 
+{/* 
+
+          TO-DO
+
+        1: Fix the Prev button
+        2: Make Gif animation only play when card is active
+        3: Fix Mobile
+*/}
+
 export default Cards;
