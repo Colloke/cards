@@ -13,8 +13,28 @@
   width: var(--width);
   height: var(--height);
   object-fit: cover;
+  position: relative;
+}
+
+.card1 {
   border: 10px solid #f2f2f2;
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
-  position: relative;
+  z-index: 1;
+  transform: translate(10%) rotate(-10deg) translateY(5%);
+}
+
+.card2 {
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.card3 {
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  border-radius: 15px;
+  z-index: 1;
+  transform: translate(-10%) rotate(10deg) translateY(5%);
 }
