@@ -18,3 +18,21 @@ export const cardData = [
         image: 'https://media1.giphy.com/media/DjvD4j87pNWrM3Quuz/giphy.gif'
     },
 ]
+
+export const textData = [
+    {
+        text: 'This is the first card'
+    },
+    {
+        text: 'This is the second card'
+    },
+    {
+        text: 'This is the third card'
+    },
+    {
+        text: 'This is the fourth card'
+    },
+    {
+        text: 'This is the fifth card'
+    },
+]

@@ -4,11 +4,11 @@ import { cardData } from './cardData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const Cards = ({ slides }: { slides:any }) => {
-  const [prev1, setPrevOne] = useState(4)
-  const [prev2, setPrevTwo] = useState(3)
-  const [current, setCurrent] = useState(0)
-  const [next1, setNextOne] = useState(1)
-  const [next2, setNextTwo] = useState(2)
+  const [prev1, setPrevOne] = useState(0)
+  const [prev2, setPrevTwo] = useState(1)
+  const [current, setCurrent] = useState(2)
+  const [next1, setNextOne] = useState(3)
+  const [next2, setNextTwo] = useState(4)
   const length = cardData.length
 
   const nextSlide = () => {
@@ -94,10 +94,8 @@ const Cards = ({ slides }: { slides:any }) => {
 {/* 
 
           TO-DO
-
-        1: Fix the Prev button
-        2: Make Gif animation only play when card is active
-        3: Fix Mobile
+        1: Make Gif animation only play when card is active
+        2: Fix Mobile
 */}
 
 export default Cards;
