@@ -1,5 +1,5 @@
 import Cards from '../src/components/cards'
-import { cardData } from './cardData'
+import { cardData } from '../src/components/cardData'
 
 export default function Home() {
   return (

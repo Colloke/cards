@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from '@/styles/Home.module.css'
-import { cardData } from '../../pages/cardData';
+import { cardData } from './cardData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const Cards = ({ slides }: { slides:any }) => {
