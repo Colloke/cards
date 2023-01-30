@@ -96,6 +96,8 @@ const Cards = ({ slides }: { slides:any }) => {
           TO-DO
         1: Make Gif animation only play when card is active
         2: Fix Mobile
+        3: Add proper text to cards
+        4: add animation to text
 */}
 
 export default Cards;
