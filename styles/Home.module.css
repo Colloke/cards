@@ -1,8 +1,10 @@
 .container {
   background-color: #544c4c;
+  background: #cdcdcd;
   border-radius: 50%;
-  height: 100vh;
-  width: 80%;
+  height: 95vh;
+  width: 60vw;
+  left: 10vw;
   display: flex;
   position: relative;
   justify-content: center;
@@ -15,7 +17,7 @@
 }
 
 .card0 {
-  --width: 23em;
+  --width: 17em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
@@ -28,7 +30,7 @@
 }
 
 .card1 {
-  --width: 23em;
+  --width: 17em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
@@ -40,7 +42,7 @@
 }
 
 .card2 {
-  --width: 30em;
+  --width: 22em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
@@ -51,7 +53,7 @@
 }
 
 .card3 {
-  --width: 23em;
+  --width: 17em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
@@ -63,7 +65,7 @@
 }
 
 .card4 {
-  --width: 23em;
+  --width: 17em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
@@ -72,4 +74,16 @@
   border-radius: 15px;
   z-index: 1;
   transform: translate(-130%) rotate(20deg) translateY(5%);
+}
+
+.text{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  z-index: 10;
 }

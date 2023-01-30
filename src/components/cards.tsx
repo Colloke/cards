@@ -32,10 +32,10 @@ const Cards = ({ slides }: { slides:any }) => {
   }
 
    return (
-    <section className={styles.container}>
+    <>
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-    
+    <section className={styles.container}>
     {cardData.map((card, index) => {
       return (
         <div className={index === prev1 ? 'slide active' : 'slide'} key={index}>
@@ -85,8 +85,9 @@ const Cards = ({ slides }: { slides:any }) => {
         </div>
       )
     })}
-
+    <div className={styles.text}>Ad Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit, temporibus necessitatibus possimus voluptatibus beatae dolorum voluptates esse optio labore nulla ad quis molestias fugit fuga iure sint odit ex.</div>
     </section>
+    </>
    )
 }
 
