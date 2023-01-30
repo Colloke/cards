@@ -1,6 +1,8 @@
 .container {
   background-color: #544c4c;
-  height: 80vh;
+  border-radius: 40%;
+  height: 90vh;
+  width: 90%;
   display: flex;
   position: relative;
   justify-content: center;
