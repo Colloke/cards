@@ -4,21 +4,27 @@ import { cardData } from './cardData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const Cards = ({ slides }: { slides:any }) => {
-  const [prev, setPrev] = useState(4)
+  const [prev1, setPrevOne] = useState(4)
+  const [prev2, setPrevTwo] = useState(3)
   const [current, setCurrent] = useState(0)
-  const [next, setNext] = useState(1)
+  const [next1, setNextOne] = useState(1)
+  const [next2, setNextTwo] = useState(2)
   const length = cardData.length
 
   const nextSlide = () => {
-    setPrev(prev === length - 1 ? 0 : prev + 1)
+    setPrevOne(prev1 === length - 1 ? 0 : prev1 + 1)
+    setPrevTwo(prev2 === length - 1 ? 0 : prev2 + 1)
     setCurrent(current === length - 1 ? 0 : current + 1)
-    setNext(next === length - 1 ? 0 : next + 1)
+    setNextOne(next1 === length - 1 ? 0 : next1 + 1)
+    setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
   }
 
   const prevSlide = () => {
-    setPrev(prev === 0 ? length - 1 : prev - 1)
+    setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
+    setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
     setCurrent(current === 0 ? length - 1 : current - 1)
-    setNext(next === 0 ? length - 1 : next - 1)
+    setNextOne(next1 === 0 ? length - 1 : next1 - 1)
+    setNextTwo(next2 === 0 ? length - 1 : next2 - 1)
   }
 
   if (!Array.isArray(cardData) || cardData.length <= 0) {
@@ -32,8 +38,18 @@ const Cards = ({ slides }: { slides:any }) => {
     
     {cardData.map((card, index) => {
       return (
-        <div className={index === prev ? 'slide active' : 'slide'} key={index}>
-          {index === prev && (
+        <div className={index === prev1 ? 'slide active' : 'slide'} key={index}>
+          {index === prev1 && (
+          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card0}`} />
+          )}
+        </div>
+      )
+    })}
+
+    {cardData.map((card, index) => {
+      return (
+        <div className={index === prev2 ? 'slide active' : 'slide'} key={index}>
+          {index === prev2 && (
           <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card1}`} />
           )}
         </div>
@@ -52,13 +68,24 @@ const Cards = ({ slides }: { slides:any }) => {
 
     {cardData.map((card, index) => {
       return (
-        <div className={index === next ? 'slide active' : 'slide'} key={index}>
-          {index === next && (
+        <div className={index === next1 ? 'slide active' : 'slide'} key={index}>
+          {index === next1 && (
           <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card3}`}/>
           )}
         </div>
       )
     })}
+
+    {cardData.map((card, index) => {
+      return (
+        <div className={index === next2 ? 'slide active' : 'slide'} key={index}>
+          {index === next2 && (
+          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card4}`}/>
+          )}
+        </div>
+      )
+    })}
+
     </section>
    )
 }
