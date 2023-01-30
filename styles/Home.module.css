@@ -36,7 +36,7 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   z-index: 2;
-  transform: translate(60%) rotate(-10deg);
+  transform: translate(60%) rotate(-10deg) translateY(-5%);
 }
 
 .card2 {
@@ -59,7 +59,7 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   z-index: 2;
-  transform: translate(-50%) rotate(10deg);
+  transform: translate(-50%) rotate(10deg) translateY(-5%);
 }
 
 .card4 {
