@@ -130,7 +130,7 @@ Since the design of it is fanned out like a hand of cards, we should investigate
   - On mobile or tablet, swiping should move the carousel over to the right or left
   - After the card finishes moving into the center trigger an animated gif or video to play in the center screen (should be able to use onTransitionEnd)
   - Trigger sound as the card moves into the center
-  - Each piece of the card should come from a data store, t̵h̵e̵ ̵i̵m̵a̵g̵e̵ and the description
+  - E̶a̶c̶h̶ ̶p̶i̶e̶c̶e̶ ̶o̶f̶ ̶t̶h̶e̶ ̶c̶a̶r̶d̶ ̶s̶h̶o̶u̶l̶d̶ ̶c̶o̶m̶e̶ ̶f̶r̶o̶m̶ ̶a̶ ̶d̶a̶t̶a̶ ̶s̶t̶o̶r̶e̶,̶ ̶t̶̵̶h̶̵̶e̶̵̶ ̶̵̶i̶̵̶m̶̵̶a̶̵̶g̶̵̶e̶̵̶ ̶a̶n̶d̶ ̶t̶h̶e̶ ̶d̶e̶s̶c̶r̶i̶p̶t̶i̶o̶n̶
   - The under-card description should be a <caption tag (for accessibility purposes)
   - Under-card descriptions should fade out o̵r̵ ̵i̵n̵ as the new card moves into the central position
 
