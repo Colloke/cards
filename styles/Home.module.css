@@ -106,6 +106,18 @@
   transform: translate(-130%) rotate(20deg) translateY(5%);
 }
 
+.offScreenCard {
+  --width: 17em;
+  --height: calc(var(--width) * 1.4);
+  width: var(--width);
+  height: var(--height);
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  border-radius: 15px;
+  z-index: 1;
+  transform: translate(-150%);
+}
+
 .text{
   position: absolute;
   top: 90%;

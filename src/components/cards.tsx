@@ -10,6 +10,7 @@ const Cards = ({ slides }: { slides:any }) => {
   const [current, setCurrent] = useState(2)
   const [next1, setNextOne] = useState(3)
   const [next2, setNextTwo] = useState(4)
+  const [offScreenCard, setOffScreenCard] = useState(5)
   const length = cardData.length
 
   const nextSlide = () => {
@@ -18,6 +19,7 @@ const Cards = ({ slides }: { slides:any }) => {
     setCurrent(current === length - 1 ? 0 : current + 1)
     setNextOne(next1 === length - 1 ? 0 : next1 + 1)
     setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
+    setOffScreenCard(offScreenCard === length - 1 ? 0 : offScreenCard + 1)
   }
   const prevSlide = () => {
     setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
@@ -25,6 +27,7 @@ const Cards = ({ slides }: { slides:any }) => {
     setCurrent(current === 0 ? length - 1 : current - 1)
     setNextOne(next1 === 0 ? length - 1 : next1 - 1)
     setNextTwo(next2 === 0 ? length - 1 : next2 - 1)
+    setOffScreenCard(offScreenCard === 0 ? length - 1 : offScreenCard - 1)
   }
 
   if (!Array.isArray(cardData) || cardData.length <= 0) {
@@ -100,6 +103,15 @@ const Cards = ({ slides }: { slides:any }) => {
     }
 
     </section>
+    {cardData.map((card, index) => {
+      return (
+        <div id="Card_6" className={index === offScreenCard ? 'slide active' : 'slide'} key={index}>
+          {index === offScreenCard && (
+          <img src={card.image} alt='Card 6' className={`${styles.card} ${styles.offScreenCard}`}/>
+          )}
+        </div>
+      )
+    })}
     </>
    )
 }
