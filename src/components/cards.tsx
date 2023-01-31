@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from '@/styles/Home.module.css'
 import { cardData } from './cardData';
 import { textData } from './cardData';
@@ -21,6 +21,7 @@ const Cards = ({ slides }: { slides:any }) => {
     setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
     setOffScreenCard(offScreenCard === length - 1 ? 0 : offScreenCard + 1)
   }
+  
   const prevSlide = () => {
     setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
     setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
@@ -103,6 +104,7 @@ const Cards = ({ slides }: { slides:any }) => {
     }
 
     </section>
+
     {cardData.map((card, index) => {
       return (
         <div id="Card_6" className={index === offScreenCard ? 'slide active' : 'slide'} key={index}>
