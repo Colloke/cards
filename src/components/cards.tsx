@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '@/styles/Home.module.css'
 import { cardData } from './cardData';
 import { textData } from './cardData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
-import waitForElementTransition from 'wait-for-element-transition';
 
 const Cards = ({ slides }: { slides:any }) => {
   const [prev1, setPrevOne] = useState(0)
@@ -21,6 +20,7 @@ const Cards = ({ slides }: { slides:any }) => {
     setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
   }
   const prevSlide = () => {
+    document.getElementById('text')!.classList.replace(styles.fadeIn, styles.fadeOut)
     setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
     setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
     setCurrent(current === 0 ? length - 1 : current - 1)
@@ -91,7 +91,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="text" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <h1 className={`${styles.text}`}>
+          <h1 className={`${styles.text} ${styles.fadeIn}`}>
             {text.text}
           </h1>
           )}
