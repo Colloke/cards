@@ -41,4 +41,7 @@ export const textData = [
     {
         text: 'This is the fifth card'
     },
+    {
+        text: 'This is the sixth card'
+    },
 ]

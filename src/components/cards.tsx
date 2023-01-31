@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from '@/styles/Home.module.css'
 import { cardData } from './cardData';
+import { textData } from './cardData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 const Cards = ({ slides }: { slides:any }) => {
@@ -50,7 +51,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div className={index === prev2 ? 'slide active' : 'slide'} key={index}>
           {index === prev2 && (
-          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card1}`} />
+          <img src={card.image} alt='Card 2' className={`${styles.card} ${styles.card1}`} />
           )}
         </div>
       )
@@ -60,7 +61,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <img src={card.image} alt='Card 1'className={`${styles.card} ${styles.card2}`} />
+          <img src={card.image} alt='Card 3'className={`${styles.card} ${styles.card2}`} />
           )}
         </div>
       )
@@ -70,7 +71,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div className={index === next1 ? 'slide active' : 'slide'} key={index}>
           {index === next1 && (
-          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card3}`}/>
+          <img src={card.image} alt='Card 4' className={`${styles.card} ${styles.card3}`}/>
           )}
         </div>
       )
@@ -80,12 +81,21 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div className={index === next2 ? 'slide active' : 'slide'} key={index}>
           {index === next2 && (
-          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card4}`}/>
+          <img src={card.image} alt='Card 5' className={`${styles.card} ${styles.card4}`}/>
           )}
         </div>
       )
     })}
-    <div className={styles.text}>Ad Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit, temporibus necessitatibus possimus voluptatibus beatae dolorum voluptates esse optio labore nulla ad quis molestias fugit fuga iure sint odit ex.</div>
+    {textData.map((text, index) => {
+      return (
+        <div className={index === current ? 'slide active' : 'slide'} key={index}>
+          {index === current && (
+          <h1 className={`${styles.text} ${styles.text2}`}>{text.text}</h1>
+          )}
+        </div>
+      )
+    })
+    }
     </section>
     </>
    )
@@ -93,7 +103,7 @@ const Cards = ({ slides }: { slides:any }) => {
 
 {/* 
           TO-DO
-        1: Make Gif animation only play when card is active
+        1: Make Gif animation only play when card is active (Static image when not active)
         2: Fix Mobile
         3: Add proper text to cards
         4: add animation to text and make text match card
