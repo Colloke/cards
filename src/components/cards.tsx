@@ -44,7 +44,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="Card_1" className={index === prev1 ? 'slide active' : 'slide'} key={index}>
           {index === prev1 && (
-          <img src={card.back} alt='Card 1' className={`${styles.card} ${styles.prev1} ${styles.card0}`} />
+          <div className={styles.card}>
+          <img src={card.back} alt='Card 1' className={`${styles.card} ${styles.front} ${styles.card0}`} />
+          </div>
           )}
         </div>
       )
@@ -54,7 +56,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="Card_2" className={index === prev2 ? 'slide active' : 'slide'} key={index}>
           {index === prev2 && (
+          <div className={styles.card}>
           <img src={card.back} alt='Card 2' className={`${styles.card} ${styles.prev2} ${styles.card1}`} />
+          </div>
           )}
         </div>
       )
@@ -64,7 +68,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="Card_3" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <img src={card.gif} alt='Card 3'className={`${styles.card} ${styles.current} ${styles.card2}`} />
+          <div className={styles.mainCard}>
+          <img src={card.gif} alt='Card 3'className={`${styles.current} ${styles.card2}`} />
+          </div>
           )}
         </div>
       )
@@ -74,7 +80,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="Card_4" className={index === next1 ? 'slide active' : 'slide'} key={index}>
           {index === next1 && (
-          <img src={card.back} alt='Card 4' className={`${styles.card} ${styles.next1} ${styles.card3}`}/>
+          <div className={styles.card}>
+          <img src={card.back} alt='Card 4' className={`${styles.next1} ${styles.card3}`}/>
+          </div>
           )}
         </div>
       )
@@ -84,7 +92,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="Card_5" className={index === next2 ? 'slide active' : 'slide'} key={index}>
           {index === next2 && (
-          <img src={card.back} alt='Card 5' className={`${styles.card} ${styles.next2} ${styles.card4}`}/>
+          <div className={styles.card}>
+          <img src={card.back} alt='Card 5' className={`${styles.next2} ${styles.card4}`}/>
+          </div>
           )}
         </div>
       )
@@ -94,9 +104,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="text" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <a id="text" className={`${styles.text} ${styles.fadeIn}`}>
+          <div id="text" className={`${styles.text} ${styles.fadeIn}`}>
             {text.text}
-          </a>
+          </div>
           )}
         </div>
       )
@@ -109,7 +119,9 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="Card_6" className={index === offScreenCard ? 'slide active' : 'slide'} key={index}>
           {index === offScreenCard && (
-          <img src={card.image} alt='Card 6' className={`${styles.card} ${styles.offScreenCard}`}/>
+          <div className={styles.card}>
+          <img src={card.image} alt='Card 6' className={`${styles.offScreenCard}`}/>
+          </div>
           )}
         </div>
       )
