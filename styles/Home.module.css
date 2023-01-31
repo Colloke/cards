@@ -23,14 +23,30 @@
 }
 
 .leftarrow {
-position: absolute;
-top: 45%;
-left: 9%;
-font-size: 3rem;
-color: #fff;
-z-index: 10;
-cursor: pointer;
-user-select: none;
+  position: absolute;
+  top: 45%;
+  left: 9%;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rightarrow:hover {
+  transform: scale(1.1);
+}
+
+.rightarrow:active .text {
+  animation: fadeOut ease 2s;
+  -webkit-animation: fadeOut ease 2s;
+  -moz-animation: fadeOut ease 2s;
+  -o-animation: fadeOut ease 2s;
+  -ms-animation: fadeOut ease 2s;
+}
+
+.leftarrow:hover {
+  transform: scale(1.1);
 }
 
 .card {

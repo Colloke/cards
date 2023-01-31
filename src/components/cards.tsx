@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css'
 import { cardData } from './cardData';
 import { textData } from './cardData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import waitForElementTransition from 'wait-for-element-transition';
 
 const Cards = ({ slides }: { slides:any }) => {
   const [prev1, setPrevOne] = useState(0)
@@ -19,7 +20,6 @@ const Cards = ({ slides }: { slides:any }) => {
     setNextOne(next1 === length - 1 ? 0 : next1 + 1)
     setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
   }
-
   const prevSlide = () => {
     setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
     setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
