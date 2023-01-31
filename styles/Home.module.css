@@ -6,7 +6,7 @@
   width: 60vw;
   left: 10vw;
   display: flex;
-  position: relative;
+  position: absolute;
   justify-content: center;
   align-items: center;
 }
