@@ -89,31 +89,11 @@ const Cards = ({ slides }: { slides:any }) => {
 
     {textData.map((text, index) => {
       return (
-        <div id="textPrev" className={index === prev1 ? 'slide active' : 'slide'} key={index}>
-          {index === prev1 && (
-          <h1 className={`${styles.text} ${styles.textPrev}`}>{text.text}</h1>
-          )}
-        </div>
-      )
-    })
-    }
-    
-    {textData.map((text, index) => {
-      return (
-        <div id="textCurrent" className={index === current ? 'slide active' : 'slide'} key={index}>
+        <div id="text" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <h1 className={`${styles.text}`}>{text.text}</h1>
-          )}
-        </div>
-      )
-    })
-    }
-
-    {textData.map((text, index) => {
-      return (
-        <div id="textNext" className={index === next1 ? 'slide active' : 'slide'} key={index}>
-          {index === next1 && (
-          <h1 className={`${styles.text} ${styles.textNext}`}>{text.text}</h1>
+          <h1 className={`${styles.text}`}>
+            {text.text}
+          </h1>
           )}
         </div>
       )
@@ -124,11 +104,5 @@ const Cards = ({ slides }: { slides:any }) => {
     </>
    )
 }
-
-{/* 
-          TO-DO
-        2: Fix Mobile
-        5: make card and make the text fade out
-*/}
 
 export default Cards;
