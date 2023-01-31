@@ -20,7 +20,6 @@ const Cards = ({ slides }: { slides:any }) => {
     setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
   }
   const prevSlide = () => {
-    document.getElementById('text')!.classList.replace(styles.fadeIn, styles.fadeOut)
     setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
     setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
     setCurrent(current === 0 ? length - 1 : current - 1)
@@ -91,7 +90,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="text" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <h1 className={`${styles.text} ${styles.fadeIn}`}>
+          <h1 id="text" className={`${styles.text} ${styles.fadeIn}`}>
             {text.text}
           </h1>
           )}

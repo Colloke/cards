@@ -120,7 +120,7 @@
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 1000ms ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -133,7 +133,7 @@
 }
 
 .fadeOut {
-  animation: fadeOut 1s ease-in-out forwards;
+  animation: fadeOut 1000ms ease-in-out forwards;
 }
 
 @keyframes fadeOut {
