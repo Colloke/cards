@@ -55,7 +55,7 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   z-index: 1;
-  transform: translate(130%) rotate(-20deg) translateY(5%);
+  transform: translate(130%) rotate(-20deg) translateY(5%) rotateY(180deg);
   
 }
 
