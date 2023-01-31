@@ -61,7 +61,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <img src={card.image} alt='Card 3'className={`${styles.card} ${styles.card2}`} />
+          <img src={card.gif} alt='Card 3'className={`${styles.card} ${styles.card2}`} />
           )}
         </div>
       )
@@ -101,7 +101,7 @@ const Cards = ({ slides }: { slides:any }) => {
     </section>
     </>
    )
-} 
+}
 
 {/* 
           TO-DO
