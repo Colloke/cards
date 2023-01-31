@@ -11,6 +11,28 @@
   align-items: center;
 }
 
+.rightarrow {
+  position: absolute;
+  top: 45%;
+  right: 28%;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.leftarrow {
+position: absolute;
+top: 45%;
+left: 9%;
+font-size: 3rem;
+color: #000;
+z-index: 10;
+cursor: pointer;
+user-select: none;
+}
+
 .card {
   object-fit: cover;
   position: relative;

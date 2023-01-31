@@ -34,8 +34,8 @@ const Cards = ({ slides }: { slides:any }) => {
 
    return (
     <>
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <FaArrowAltCircleLeft className={styles.leftarrow} onClick={prevSlide} />
+      <FaArrowAltCircleRight className={styles.rightarrow} onClick={nextSlide} />
     <section className={styles.container}>
     {cardData.map((card, index) => {
       return (
