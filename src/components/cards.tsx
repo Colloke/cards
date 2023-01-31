@@ -91,7 +91,7 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <h1 className={`${styles.text} ${styles.text2}`}>{text.text}</h1>
+          <h1 className={`${styles.text} ${styles.fadeIn} ${styles.fadeOut}`}>{text.text}</h1>
           )}
         </div>
       )
@@ -105,9 +105,8 @@ const Cards = ({ slides }: { slides:any }) => {
 
 {/* 
           TO-DO
-        1: Make Gif animation only play when card is active (Static image when not active)
         2: Fix Mobile
-        5: make card and text animation
+        5: make card and make the text fade out
 */}
 
 export default Cards;
