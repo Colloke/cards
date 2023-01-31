@@ -34,14 +34,14 @@ const Cards = ({ slides }: { slides:any }) => {
 
    return (
     <>
-      <FaArrowAltCircleLeft className={styles.leftarrow} onClick={prevSlide} />
-      <FaArrowAltCircleRight className={styles.rightarrow} onClick={nextSlide} />
+    <FaArrowAltCircleLeft id='leftArrow' className={styles.leftarrow} onClick={prevSlide} />
+    <FaArrowAltCircleRight id='rightArrow' className={styles.rightarrow} onClick={nextSlide} />
     <section className={styles.container}>
     {cardData.map((card, index) => {
       return (
-        <div className={index === prev1 ? 'slide active' : 'slide'} key={index}>
+        <div id="Card_1" className={index === prev1 ? 'slide active' : 'slide'} key={index}>
           {index === prev1 && (
-          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.card0}`} />
+          <img src={card.image} alt='Card 1' className={`${styles.card} ${styles.prev1} ${styles.card0}`} />
           )}
         </div>
       )
@@ -49,9 +49,9 @@ const Cards = ({ slides }: { slides:any }) => {
 
     {cardData.map((card, index) => {
       return (
-        <div className={index === prev2 ? 'slide active' : 'slide'} key={index}>
+        <div id="Card_2" className={index === prev2 ? 'slide active' : 'slide'} key={index}>
           {index === prev2 && (
-          <img src={card.image} alt='Card 2' className={`${styles.card} ${styles.card1}`} />
+          <img src={card.image} alt='Card 2' className={`${styles.card} ${styles.prev2} ${styles.card1}`} />
           )}
         </div>
       )
@@ -59,9 +59,9 @@ const Cards = ({ slides }: { slides:any }) => {
 
     {cardData.map((card, index) => {
       return (
-        <div className={index === current ? 'slide active' : 'slide'} key={index}>
+        <div id="Card_3" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <img src={card.gif} alt='Card 3'className={`${styles.card} ${styles.card2}`} />
+          <img src={card.gif} alt='Card 3'className={`${styles.card} ${styles.current} ${styles.card2}`} />
           )}
         </div>
       )
@@ -69,9 +69,9 @@ const Cards = ({ slides }: { slides:any }) => {
 
     {cardData.map((card, index) => {
       return (
-        <div className={index === next1 ? 'slide active' : 'slide'} key={index}>
+        <div id="Card_4" className={index === next1 ? 'slide active' : 'slide'} key={index}>
           {index === next1 && (
-          <img src={card.image} alt='Card 4' className={`${styles.card} ${styles.card3}`}/>
+          <img src={card.image} alt='Card 4' className={`${styles.card} ${styles.next1} ${styles.card3}`}/>
           )}
         </div>
       )
@@ -79,19 +79,41 @@ const Cards = ({ slides }: { slides:any }) => {
 
     {cardData.map((card, index) => {
       return (
-        <div className={index === next2 ? 'slide active' : 'slide'} key={index}>
+        <div id="Card_5" className={index === next2 ? 'slide active' : 'slide'} key={index}>
           {index === next2 && (
-          <img src={card.image} alt='Card 5' className={`${styles.card} ${styles.card4}`}/>
+          <img src={card.image} alt='Card 5' className={`${styles.card} ${styles.next2} ${styles.card4}`}/>
           )}
         </div>
       )
     })}
+
+    {textData.map((text, index) => {
+      return (
+        <div id="textPrev" className={index === prev1 ? 'slide active' : 'slide'} key={index}>
+          {index === prev1 && (
+          <h1 className={`${styles.text} ${styles.textPrev}`}>{text.text}</h1>
+          )}
+        </div>
+      )
+    })
+    }
     
     {textData.map((text, index) => {
       return (
-        <div className={index === current ? 'slide active' : 'slide'} key={index}>
+        <div id="textCurrent" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <h1 className={`${styles.text} ${styles.fadeIn}`}>{text.text}</h1>
+          <h1 className={`${styles.text}`}>{text.text}</h1>
+          )}
+        </div>
+      )
+    })
+    }
+
+    {textData.map((text, index) => {
+      return (
+        <div id="textNext" className={index === next1 ? 'slide active' : 'slide'} key={index}>
+          {index === next1 && (
+          <h1 className={`${styles.text} ${styles.textNext}`}>{text.text}</h1>
           )}
         </div>
       )
