@@ -27,21 +27,21 @@ export const cardData = [
 
 export const textData = [
     {
-        text: 'This is the first card'
+        text: ''
     },
     {
-        text: 'This is the second card'
+        text: ''
     },
     {
-        text: 'This is the third card'
+        text: ''
     },
     {
-        text: 'This is the fourth card'
+        text: ''
     },
     {
-        text: 'This is the fifth card'
+        text: ''
     },
     {
-        text: 'This is the sixth card'
+        text: ''
     },
 ]
