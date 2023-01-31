@@ -27,21 +27,21 @@ export const cardData = [
 
 export const textData = [
     {
-        link: 'https://raw.githubusercontent.com/Colloke/cards/main/src/card_text/first_card.txt'
+        text: 'First Card'
     },
     {
-        link: 'https://raw.githubusercontent.com/Colloke/cards/main/src/card_text/second_card.txt'
+        text: 'Second Card'
     },
     {
-        link: 'https://raw.githubusercontent.com/Colloke/cards/main/src/card_text/third_card.txt'
+        text: 'Third Card'
     },
     {
-        link: 'https://raw.githubusercontent.com/Colloke/cards/main/src/card_text/fourth_card.txt'
+        text: 'Fourth Card'
     },
     {
-        link: 'https://raw.githubusercontent.com/Colloke/cards/main/src/card_text/fifth_card.txt'
+        text: 'Fifth Card'
     },
     {
-        link: 'https://raw.githubusercontent.com/Colloke/cards/main/src/card_text/sixth_card.txt'
+        text: 'Sixth Card'
     },
 ]

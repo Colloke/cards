@@ -94,8 +94,8 @@ const Cards = ({ slides }: { slides:any }) => {
       return (
         <div id="text" className={index === current ? 'slide active' : 'slide'} key={index}>
           {index === current && (
-          <a id="text" className={`${styles.text} ${styles.fadeIn}`} href={text.link}>
-            {text.link}
+          <a id="text" className={`${styles.text} ${styles.fadeIn}`}>
+            {text.text}
           </a>
           )}
         </div>
