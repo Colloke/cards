@@ -21,7 +21,7 @@ const Cards = ({ slides }: { slides:any }) => {
     setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
     setOffScreenCard(offScreenCard === length - 1 ? 0 : offScreenCard + 1)
   }
-  
+
   const prevSlide = () => {
     setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
     setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
@@ -119,3 +119,24 @@ const Cards = ({ slides }: { slides:any }) => {
 }
 
 export default Cards;
+
+{/* 
+
+Since the design of it is fanned out like a hand of cards, we should investigate
+
+  - Apply transform-origin to the bottom of the card and use rotateY around the new origin to rotate it around the “hand”
+  - All cards not in carousel are rendered offscreen and moved into view as sorted through probably with transformX
+  - Clicking Right or Left will move the card and rotate it over
+  - On mobile or tablet, swiping should move the carousel over to the right or left
+  - After the card finishes moving into the center trigger an animated gif or video to play in the center screen (should be able to use onTransitionEnd)
+  - Trigger sound as the card moves into the center
+  - Each piece of the card should come from a data store, t̵h̵e̵ ̵i̵m̵a̵g̵e̵ and the description
+  - The under-card description should be a <caption tag (for accessibility purposes)
+  - Under-card descriptions should fade out o̵r̵ ̵i̵n̵ as the new card moves into the central position
+
+Nice to have:
+The new card from the left or right should slide in from the side of the screen as if the card is being dealt into the carousel or discarded.
+Clicking on card will go full screen?
+
+
+*/}
