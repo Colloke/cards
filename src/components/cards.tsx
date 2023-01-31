@@ -86,6 +86,7 @@ const Cards = ({ slides }: { slides:any }) => {
         </div>
       )
     })}
+    
     {textData.map((text, index) => {
       return (
         <div className={index === current ? 'slide active' : 'slide'} key={index}>
@@ -96,6 +97,7 @@ const Cards = ({ slides }: { slides:any }) => {
       )
     })
     }
+
     </section>
     </>
    )
@@ -105,9 +107,7 @@ const Cards = ({ slides }: { slides:any }) => {
           TO-DO
         1: Make Gif animation only play when card is active (Static image when not active)
         2: Fix Mobile
-        3: Add proper text to cards
-        4: add animation to text and make text match card
-        5: make card animation
+        5: make card and text animation
 */}
 
 export default Cards;
