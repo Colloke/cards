@@ -1,138 +1,118 @@
-import React, { useState } from 'react';
-import styles from '@/styles/Home.module.css'
-import { cardData } from './cardData';
-import { textData } from './cardData';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import React, { useState } from "react";
+import Image from "next/image";
+import styles from "@/styles/Home.module.css";
+import { cardData } from "./cardData";
+import { textData } from "./cardData";
+import classnames from "classnames";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
-const Cards = ({ slides }: { slides:any }) => {
-  const [prev1, setPrevOne] = useState(0)
-  const [prev2, setPrevTwo] = useState(1)
-  const [current, setCurrent] = useState(2)
-  const [next1, setNextOne] = useState(3)
-  const [next2, setNextTwo] = useState(4)
-  const [offScreenCard, setOffScreenCard] = useState(5)
-  const length = cardData.length
+export const calculateVisibleCardArray = (
+  cardData: any[],
+  selectedIndex: number
+): any[] => {
+  const leftMostCard = selectedIndex - 2;
+  const rightMostCard = selectedIndex + 2;
+  const visibleCardArray = [];
+  for (let i = leftMostCard; i <= rightMostCard; i++) {
+    visibleCardArray.push(cardData.at(i % cardData.length));
+  }
+  console.log(visibleCardArray);
+  return visibleCardArray;
+};
+
+const Cards = ({ slides }: { slides: any }) => {
+  const [current, setCurrent] = useState(2);
+  const length = cardData.length;
 
   const nextSlide = () => {
-    setPrevOne(prev1 === length - 1 ? 0 : prev1 + 1)
-    setPrevTwo(prev2 === length - 1 ? 0 : prev2 + 1)
-    setCurrent(current === length - 1 ? 0 : current + 1)
-    setNextOne(next1 === length - 1 ? 0 : next1 + 1)
-    setNextTwo(next2 === length - 1 ? 0 : next2 + 1)
-    setOffScreenCard(offScreenCard === length - 1 ? 0 : offScreenCard + 1)
-  }
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
   const prevSlide = () => {
-    setPrevOne(prev1 === 0 ? length - 1 : prev1 - 1)
-    setPrevTwo(prev2 === 0 ? length - 1 : prev2 - 1)
-    setCurrent(current === 0 ? length - 1 : current - 1)
-    setNextOne(next1 === 0 ? length - 1 : next1 - 1)
-    setNextTwo(next2 === 0 ? length - 1 : next2 - 1)
-    setOffScreenCard(offScreenCard === 0 ? length - 1 : offScreenCard - 1)
-  }
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
 
   if (!Array.isArray(cardData) || cardData.length <= 0) {
     return null;
   }
 
-   return (
+  const visibleCards = calculateVisibleCardArray(cardData, current);
+
+  return (
     <>
-    <FaArrowAltCircleLeft id='leftArrow' className={styles.leftarrow} onClick={prevSlide} />
-    <FaArrowAltCircleRight id='rightArrow' className={styles.rightarrow} onClick={nextSlide} />
-    <section className={styles.container}>
-    {cardData.map((card, index) => {
-      return (
-        <div id="Card_1" className={index === prev1 ? 'slide active' : 'slide'} key={index}>
-          {index === prev1 && (
-          <div className={styles.card}>
-          <img src={card.back} alt='Card 1' className={`${styles.card} ${styles.front} ${styles.card0}`} />
-          </div>
-          )}
-        </div>
-      )
-    })}
+      <FaArrowAltCircleLeft
+        id="leftArrow"
+        className={styles.leftarrow}
+        onClick={prevSlide}
+      />
+      <FaArrowAltCircleRight
+        id="rightArrow"
+        className={styles.rightarrow}
+        onClick={nextSlide}
+      />
+      <section className={styles.container}>
+        {visibleCards.map((card, index) => {
+          return (
+            <div id={`Card_${card.id}`} key={card.id}>
+              {
+                <div className={styles.card}>
+                  <img
+                    src={index !== 2 ? card.back : card.image}
+                    alt={`Card ${index}`}
+                    className={classnames(styles.card, styles[`card${index}`], {
+                      [styles.mainCard]: index === 2,
+                    })}
+                  />
+                </div>
+              }
+            </div>
+          );
+        })}
 
-    {cardData.map((card, index) => {
-      return (
-        <div id="Card_2" className={index === prev2 ? 'slide active' : 'slide'} key={index}>
-          {index === prev2 && (
-          <div className={styles.card}>
-          <img src={card.back} alt='Card 2' className={`${styles.card} ${styles.prev2} ${styles.card1}`} />
-          </div>
-          )}
-        </div>
-      )
-    })}
+        {textData.map((text, index) => {
+          return (
+            <div
+              id="text"
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <div id="text" className={`${styles.text} ${styles.fadeIn}`}>
+                  {text.text}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </section>
 
-    {cardData.map((card, index) => {
-      return (
-        <div id="Card_3" className={index === current ? 'slide active' : 'slide'} key={index}>
-          {index === current && (
-          <div className={styles.mainCard}>
-          <img src={card.gif} alt='Card 3'className={`${styles.current} ${styles.card2}`} />
+      {/* {cardData.map((card, index) => {
+        return (
+          <div
+            id="Card_6"
+            className={index === offScreenCard ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === offScreenCard && (
+              <div className={styles.card}>
+                <Image
+                  src={card.image}
+                  alt="Card 6"
+                  className={`${styles.offScreenCard}`}
+                />
+              </div>
+            )}
           </div>
-          )}
-        </div>
-      )
-    })}
-
-    {cardData.map((card, index) => {
-      return (
-        <div id="Card_4" className={index === next1 ? 'slide active' : 'slide'} key={index}>
-          {index === next1 && (
-          <div className={styles.card}>
-          <img src={card.back} alt='Card 4' className={`${styles.next1} ${styles.card3}`}/>
-          </div>
-          )}
-        </div>
-      )
-    })}
-
-    {cardData.map((card, index) => {
-      return (
-        <div id="Card_5" className={index === next2 ? 'slide active' : 'slide'} key={index}>
-          {index === next2 && (
-          <div className={styles.card}>
-          <img src={card.back} alt='Card 5' className={`${styles.next2} ${styles.card4}`}/>
-          </div>
-          )}
-        </div>
-      )
-    })}
-
-    {textData.map((text, index) => {
-      return (
-        <div id="text" className={index === current ? 'slide active' : 'slide'} key={index}>
-          {index === current && (
-          <div id="text" className={`${styles.text} ${styles.fadeIn}`}>
-            {text.text}
-          </div>
-          )}
-        </div>
-      )
-    })
-    }
-
-    </section>
-
-    {cardData.map((card, index) => {
-      return (
-        <div id="Card_6" className={index === offScreenCard ? 'slide active' : 'slide'} key={index}>
-          {index === offScreenCard && (
-          <div className={styles.card}>
-          <img src={card.image} alt='Card 6' className={`${styles.offScreenCard}`}/>
-          </div>
-          )}
-        </div>
-      )
-    })}
+        );
+      })} */}
     </>
-   )
-}
+  );
+};
 
 export default Cards;
 
-{/* 
+{
+  /* 
 
 Since the design of it is fanned out like a hand of cards, we should investigate
 
@@ -151,4 +131,5 @@ The new card from the left or right should slide in from the side of the screen 
 Clicking on card will go full screen?
 
 
-*/}
+*/
+}
