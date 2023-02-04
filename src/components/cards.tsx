@@ -53,19 +53,12 @@ const Cards = ({ slides }: { slides: any }) => {
       <section className={styles.container}>
         {visibleCards.map((card, index) => {
           return (
-            <div id={`Card_${card.id}`} key={card.id}>
-              {
-                <div className={styles.card}>
-                  <img
-                    src={index !== 2 ? card.back : card.image}
-                    alt={`Card ${index}`}
-                    className={classnames(styles.card, styles[`card${index}`], {
-                      [styles.mainCard]: index === 2,
-                    })}
-                  />
-                </div>
-              }
-            </div>
+            <img
+              key={`Card-${card.id}`}
+              src={index !== 2 ? card.back : card.image}
+              alt={`Card ${index}`}
+              className={classnames(styles.card, styles[`card${index}`])}
+            />
           );
         })}
 
