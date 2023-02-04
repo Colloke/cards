@@ -41,17 +41,19 @@ const Cards = ({ slides }: { slides: any }) => {
 
   return (
     <>
-      <FaArrowAltCircleLeft
-        id="leftArrow"
-        className={styles.leftarrow}
-        onClick={prevSlide}
-      />
-      <FaArrowAltCircleRight
-        id="rightArrow"
-        className={styles.rightarrow}
-        onClick={nextSlide}
-      />
       <section className={styles.container}>
+
+        <FaArrowAltCircleLeft
+          id="leftArrow"
+          className={classnames(styles.arrow, styles.leftarrow)}
+          onClick={prevSlide}
+        />
+        <FaArrowAltCircleRight
+          id="rightArrow"
+          className={classnames(styles.arrow, styles.rightarrow)}
+          onClick={nextSlide}
+        />
+
         {visibleCards.map((card, index) => {
           return (
             <img
@@ -71,7 +73,7 @@ const Cards = ({ slides }: { slides: any }) => {
               key={index}
             >
               {index === current && (
-                <div id="text" className={`${styles.text} ${styles.fadeIn}`}>
+                <div id="text" className={styles.text}>
                   {text.text}
                 </div>
               )}
@@ -79,35 +81,8 @@ const Cards = ({ slides }: { slides: any }) => {
           );
         })}
       </section>
-
-      {/* {cardData.map((card, index) => {
-        return (
-          <div
-            id="Card_6"
-            className={index === offScreenCard ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === offScreenCard && (
-              <div className={styles.card}>
-                <Image
-                  src={card.image}
-                  alt="Card 6"
-                  className={`${styles.offScreenCard}`}
-                />
-              </div>
-            )}
-          </div>
-        );
-      })} */}
     </>
   );
 };
 
 export default Cards;
-
-{
-  /* 
-    To do:
-    - Fix Gif not working
-  */
-}

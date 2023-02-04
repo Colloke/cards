@@ -2,35 +2,30 @@
   background-color: #544c4c;
   background: #cdcdcd;
   border-radius: 50%;
-  height: 95vh;
-  width: 60vw;
-  left: 10vw;
+  height: 80vh;
+  width: 70vw;
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .rightarrow {
-  position: absolute;
-  top: 45%;
-  right: 28.6%;
-  font-size: 3rem;
-  color: #fff;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+  right: 1vw;
 }
 
 .leftarrow {
-  position: absolute;
-  top: 45%;
-  left: 8.65%;
-  font-size: 3rem;
-  color: #fff;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+  left: 1vw;
 }
 
 .rightarrow:hover {
@@ -42,115 +37,56 @@
 }
 
 .card {
-  position: absolute;
+  position: absolute; 
+  --width: 17em;
+  --height: calc(var(--width) * 1.4);
+  width: var(--width);
+  height: var(--height);
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  border-radius: 15px;
   transform-origin: 50% 200%;
   transition: all 0.5s ease-in-out;
 }
 
 .card0 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
   transform: rotate(-25deg);
-  z-index: 1;
 }
 
 .card1 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
   transform: rotate(-15deg);
-  z-index: 2;
 }
 
 .card2 {
   --width: 22em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
-  z-index: 8;
+  z-index: 2;
 }
 
 .card3 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
   transform: rotate(15deg);
-  z-index: 5;
+  z-index: 1;
 }
 
 .card4 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
-  z-index: 1;
   transform: rotate(25deg);
 }
 
-.offScreenCard {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
-  z-index: 1;
-}
-
 .text {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  color: #000;
-  font-size: 1rem;
-  font-weight: 600;
+  position: relative;
+  top: 30vh;
   text-align: center;
+  color: black;
   z-index: 10;
-  transition-property: opacity;
 }
 
-.fadeIn {
-  animation: fadeIn 1000ms ease-in-out forwards;
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+/* Smaller Screens */
+@media only screen and (max-width: 1024px) {
+  .container {
+    background: black;
   }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeOut {
-  animation: fadeOut 1000ms ease-in-out forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+  .text {
+    color: white;
+    top: 50vh;
   }
 }
