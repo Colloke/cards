@@ -11,10 +11,14 @@
   align-items: center;
 }
 
-.rightarrow {
+@media (max-width: 1024px) {
+  .container {
+    background: black;
+  }
+}
+
+.arrow {
   position: absolute;
-  top: 45%;
-  right: 28.6%;
   font-size: 3rem;
   color: #fff;
   z-index: 10;
@@ -22,15 +26,15 @@
   user-select: none;
 }
 
+.rightarrow {
+  top: 45%;
+  right: 28.6%;
+}
+
 .leftarrow {
-  position: absolute;
   top: 45%;
   left: 8.65%;
-  font-size: 3rem;
-  color: #fff;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+  
 }
 
 .rightarrow:hover {

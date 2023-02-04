@@ -43,12 +43,12 @@ const Cards = ({ slides }: { slides: any }) => {
     <>
       <FaArrowAltCircleLeft
         id="leftArrow"
-        className={styles.leftarrow}
+        className={classnames(styles.arrow, styles.leftarrow)}
         onClick={prevSlide}
       />
       <FaArrowAltCircleRight
         id="rightArrow"
-        className={styles.rightarrow}
+        className={classnames(styles.arrow, styles.rightarrow)}
         onClick={nextSlide}
       />
       <section className={styles.container}>
