@@ -2,12 +2,13 @@
   background-color: #544c4c;
   background: #cdcdcd;
   border-radius: 50%;
-  height: 95vh;
-  width: 60vw;
+  height: 80vh;
+  width: 70vw;
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .arrow {
