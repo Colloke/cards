@@ -79,35 +79,8 @@ const Cards = ({ slides }: { slides: any }) => {
           );
         })}
       </section>
-
-      {/* {cardData.map((card, index) => {
-        return (
-          <div
-            id="Card_6"
-            className={index === offScreenCard ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === offScreenCard && (
-              <div className={styles.card}>
-                <Image
-                  src={card.image}
-                  alt="Card 6"
-                  className={`${styles.offScreenCard}`}
-                />
-              </div>
-            )}
-          </div>
-        );
-      })} */}
     </>
   );
 };
 
 export default Cards;
-
-{
-  /* 
-    To do:
-    - Fix Gif not working
-  */
-}

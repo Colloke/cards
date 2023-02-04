@@ -42,79 +42,38 @@
 }
 
 .card {
-  position: absolute;
+  position: absolute; 
+  --width: 17em;
+  --height: calc(var(--width) * 1.4);
+  width: var(--width);
+  height: var(--height);
+  border: 10px solid #f2f2f2;
+  box-shadow: 0 0 4px #0007;
+  border-radius: 15px;
   transform-origin: 50% 200%;
   transition: all 0.5s ease-in-out;
 }
 
 .card0 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
   transform: rotate(-25deg);
-  z-index: 1;
 }
 
 .card1 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
   transform: rotate(-15deg);
-  z-index: 2;
 }
 
 .card2 {
   --width: 22em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
-  z-index: 8;
+  z-index: 2;
 }
 
 .card3 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
   transform: rotate(15deg);
-  z-index: 5;
+  z-index: 1;
 }
 
 .card4 {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
-  z-index: 1;
   transform: rotate(25deg);
-}
-
-.offScreenCard {
-  --width: 17em;
-  --height: calc(var(--width) * 1.4);
-  width: var(--width);
-  height: var(--height);
-  border: 10px solid #f2f2f2;
-  box-shadow: 0 0 4px #0007;
-  border-radius: 15px;
-  z-index: 1;
 }
 
 .text {
@@ -127,30 +86,4 @@
   text-align: center;
   z-index: 10;
   transition-property: opacity;
-}
-
-.fadeIn {
-  animation: fadeIn 1000ms ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeOut {
-  animation: fadeOut 1000ms ease-in-out forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
