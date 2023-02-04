@@ -54,7 +54,7 @@ const Cards = ({ slides }: { slides: any }) => {
       <section className={styles.container}>
         {visibleCards.map((card, index) => {
           return (
-            <Image
+            <img
               key={`Card-${card.id}`}
               src={index !== 2 ? card.back : card.image}
               alt={`Card ${index}`}
