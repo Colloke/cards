@@ -41,17 +41,19 @@ const Cards = ({ slides }: { slides: any }) => {
 
   return (
     <>
-      <FaArrowAltCircleLeft
-        id="leftArrow"
-        className={classnames(styles.arrow, styles.leftarrow)}
-        onClick={prevSlide}
-      />
-      <FaArrowAltCircleRight
-        id="rightArrow"
-        className={classnames(styles.arrow, styles.rightarrow)}
-        onClick={nextSlide}
-      />
       <section className={styles.container}>
+
+        <FaArrowAltCircleLeft
+          id="leftArrow"
+          className={classnames(styles.arrow, styles.leftarrow)}
+          onClick={prevSlide}
+        />
+        <FaArrowAltCircleRight
+          id="rightArrow"
+          className={classnames(styles.arrow, styles.rightarrow)}
+          onClick={nextSlide}
+        />
+
         {visibleCards.map((card, index) => {
           return (
             <img
@@ -71,7 +73,7 @@ const Cards = ({ slides }: { slides: any }) => {
               key={index}
             >
               {index === current && (
-                <div id="text" className={`${styles.text} ${styles.fadeIn}`}>
+                <div id="text" className={styles.text}>
                   {text.text}
                 </div>
               )}

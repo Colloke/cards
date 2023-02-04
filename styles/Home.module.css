@@ -4,17 +4,10 @@
   border-radius: 50%;
   height: 95vh;
   width: 60vw;
-  left: 10vw;
   display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    background: black;
-  }
 }
 
 .arrow {
@@ -27,14 +20,11 @@
 }
 
 .rightarrow {
-  top: 45%;
-  right: 28.6%;
+  right: 1vw;
 }
 
 .leftarrow {
-  top: 45%;
-  left: 8.65%;
-  
+  left: 1vw;
 }
 
 .rightarrow:hover {
@@ -81,13 +71,21 @@
 }
 
 .text {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  color: #000;
-  font-size: 1rem;
-  font-weight: 600;
+  position: relative;
+  top: 30vh;
   text-align: center;
+  color: black;
   z-index: 10;
-  transition-property: opacity;
+}
+
+
+/* Smaller Screens */
+@media only screen and (max-width: 1024px) {
+  .container {
+    background: black;
+  }
+  .text {
+    color: white;
+    top: 50vh;
+  }
 }
