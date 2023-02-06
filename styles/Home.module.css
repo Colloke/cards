@@ -46,7 +46,7 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   transform-origin: 50% 200%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1.2);
 }
 
 .card0 {
