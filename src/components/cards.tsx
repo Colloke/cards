@@ -5,7 +5,7 @@ import { cardData } from "./cardData";
 import { textData } from "./cardData";
 import classnames from "classnames";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import placeHolderImg from '../card_images/Screenshot_2023-01-31_10-24-05.png'
+import CardPlaceholder from '../card_images/card_back.jpg'
 
 export const calculateVisibleCardArray = (
   cardData: any[],
@@ -56,7 +56,6 @@ const Cards = ({ slides }: { slides: any }) => {
 
         {visibleCards.map((card, index) => {
           return (
-            <>
             <Image
               key={`Card-${card.id}`}
               src={index !== 2 ? card.back : card.image}
@@ -65,15 +64,6 @@ const Cards = ({ slides }: { slides: any }) => {
               height='420'
               className={classnames(styles.card, styles[`card${index}`])}
             />
-            <Image
-              key={`Card-${card.id}`}
-              src={index !== 2 ? card.back : card.image}
-              alt={`Card ${index}`}
-              width='280'
-              height='420'
-              className={classnames(styles.card, styles[`card${index}`])}
-            />
-            </>
           );
         })}
 
