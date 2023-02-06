@@ -5,7 +5,6 @@ import { cardData } from "./cardData";
 import { textData } from "./cardData";
 import classnames from "classnames";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants";
 
 export const calculateVisibleCardArray = (
   cardData: any[],
@@ -56,10 +55,12 @@ const Cards = ({ slides }: { slides: any }) => {
 
         {visibleCards.map((card, index) => {
           return (
-            <img
+            <Image
               key={`Card-${card.id}`}
               src={index !== 2 ? card.back : card.image}
               alt={`Card ${index}`}
+              width='280'
+              height='420'
               className={classnames(styles.card, styles[`card${index}`])}
             />
           );
