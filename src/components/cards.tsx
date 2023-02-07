@@ -58,7 +58,7 @@ const Cards = ({ slides }: { slides: any }) => {
           return (
             <Image
               key={`Card-${card.id}`}
-              src={index !== 2 ? card.back : card.image}
+              src={index !== 2 ? card.back : card.gif}
               alt={`Card ${index}`}
               width='280'
               height='420'
