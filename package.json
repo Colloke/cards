@@ -19,6 +19,7 @@
     "react-arrow-nav": "^0.0.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
+    "react-swipeable": "^7.0.0",
     "readfilesync": "^1.1.5",
     "styled-components": "^5.3.6",
     "swr": "^2.0.3",
