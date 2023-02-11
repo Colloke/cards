@@ -82,13 +82,16 @@
 
 /* Smaller Screens */
 @media only screen and (max-width: 1024px) {
+  /* Remove container */
   .container {
     background: black;
   }
+  /* Make text white and move it down */
   .text {
     color: white;
     top: 50vh;
   }
+  /* Remove first and last card */
   .card0 {
     opacity: 0;
   }
