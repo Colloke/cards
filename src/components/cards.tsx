@@ -93,6 +93,6 @@ To-do:
 
 1) Add swipe functionality?
 2) Change animation to work with swpie functionality
-3) Make card flip in an flip out, have swipe allow you to half flip
+3) Make card flip in an flip out, have swipe allow you to half flips
 
 */}
