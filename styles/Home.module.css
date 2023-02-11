@@ -89,4 +89,10 @@
     color: white;
     top: 50vh;
   }
+  .card0 {
+    opacity: 0;
+  }
+  .card4 {
+    opacity: 0;
+  }
 }
