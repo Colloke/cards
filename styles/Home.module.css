@@ -60,6 +60,8 @@
 .card2 {
   --width: 22em;
   z-index: 2;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
 }
 
 .card3 {

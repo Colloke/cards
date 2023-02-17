@@ -6,6 +6,8 @@ import { textData } from "./cardData";
 import classnames from "classnames";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
+// Card data is an array of objects with the following properties:
+
 export const calculateVisibleCardArray = (
   cardData: any[],
   selectedIndex: number
@@ -16,9 +18,10 @@ export const calculateVisibleCardArray = (
   for (let i = leftMostCard; i <= rightMostCard; i++) {
     visibleCardArray.push(cardData.at(i % cardData.length));
   }
-  console.log(visibleCardArray);
   return visibleCardArray;
 };
+
+// Logic for the cards:
 
 const Cards = ({ slides }: { slides: any }) => {
   const [current, setCurrent] = useState(2);
@@ -37,6 +40,8 @@ const Cards = ({ slides }: { slides: any }) => {
   }
 
   const visibleCards = calculateVisibleCardArray(cardData, current);
+
+// JSX for the cards:
 
   return (
     <>
@@ -57,7 +62,7 @@ const Cards = ({ slides }: { slides: any }) => {
           return (
             <Image
               key={`Card-${card.id}`}
-              src={index !== 2 ? card.back : card.image} /* card.image for image or card.gif for gif */
+              src={index !== 2 ? card.back : card.image}
               alt={`Card ${index}`}
               width='280'
               height='420'
@@ -87,12 +92,3 @@ const Cards = ({ slides }: { slides: any }) => {
 };
 
 export default Cards;
-
-{/*
-To-do:
-
-1) Add swipe functionality?
-2) Change animation to work with swpie functionality
-3) Make card flip in an flip out, have swipe allow you to half flips
-
-*/}
