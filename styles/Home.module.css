@@ -9,7 +9,16 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
+  /* For the 3D flip effect */
+  perspective: 1000px;
 }
+
+/* 
+
+        FOR THE ARROWS:
+
+*/
 
 .arrow {
   position: absolute;
@@ -36,17 +45,30 @@
   transform: scale(1.1);
 }
 
+/* 
+
+        FOR THE CARDS:
+
+*/
+
 .card {
   position: absolute; 
+
+  /* Make the card images card shaped */
   --width: 17em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
   height: var(--height);
+
+
   border: 10px solid #f2f2f2;
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   transform-origin: 50% 200%;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1.2);
+
+  /* For the 3D flip effect */
+  transform-style: preserve-3d;
 }
 
 .card0 {
@@ -60,8 +82,11 @@
 .card2 {
   --width: 22em;
   z-index: 2;
-  transform: rotateY(180deg);
-  transition: transform 0.5s;
+
+  /* FOR THE FLIP ANIMATION */
+  --x: 0deg;
+  transform: rotateY(var(--x));
+  transition: transform 1s;
 }
 
 .card3 {
@@ -72,6 +97,12 @@
 .card4 {
   transform: rotate(25deg);
 }
+
+/* 
+
+        FOR THE TEXT:
+
+*/
 
 .text {
   position: relative;

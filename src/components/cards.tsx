@@ -92,3 +92,20 @@ const Cards = ({ slides }: { slides: any }) => {
 };
 
 export default Cards;
+
+{/*
+
+TO DO:
+
+If prevSlide is selected then flip the card 180 deg
+If nextSlide is selected then flip the card -180 deg
+
+If either button is pressed then there needs to be a delay before 
+the new image is shown. I have a couple ideas:
+
+1) Use a setTimeout function to delay the image change by 1 second ( BAD )
+
+2) Find a way to use css/js to wait for the css animation to finish and 
+then change the image ( GOOD )
+
+*/}
