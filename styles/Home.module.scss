@@ -79,13 +79,14 @@
   transform: rotate(-15deg);
 }
 
+$flipVariable: 180deg;
+
 .card2 {
   --width: 22em;
   z-index: 2;
 
   /* FOR THE FLIP ANIMATION */
-  --x: 0deg;
-  transform: rotateY(var(--x));
+  transform: rotateY($flipVariable);
   transition: transform 1s;
 }
 
