@@ -84,6 +84,7 @@
   z-index: 2;
 
   /* FOR THE FLIP ANIMATION */
+  --x: 0deg;
   transform: rotateY(var(--x));
   transition: transform 1s;
 }
