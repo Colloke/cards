@@ -56,27 +56,15 @@ const Cards = ({ slides }: { slides: any }) => {
 
       {/* 
      
-     I need to have a container div so that the front and back can be rendered
-     at the same time. 
+        Card #2 is the only card that needs to have the front and back rendered.
+        When the button is pressed card #2 needs to first show the back image and then
+        flip to the front. 
 
-     The problem is that I don't know the best way to display the back of the cards
-     for all the cards but card2 and the front only for card2.
-
-    When a button is clicked it needs to move card2 into place on it's
-    back side and then flip it over to the front.
-    
-    I think this means that I only need to render the front and back
-    for the active card and leave the other ones as is.
-
-    I think the best way to do this is to have one map that renders
-    all the cards but card2 and then another map that renders card2.
+        Unsure how to accomplish this.
 
       */}
 
         <div className={styles.cardContainer}>
-
-          {/* Current plan is to have this map render all the cards 
-          but card #2 */}
         {visibleCards.map((card, index) => {
           return (
             <Image
@@ -85,22 +73,7 @@ const Cards = ({ slides }: { slides: any }) => {
               alt={`Card ${index}`}
               width='280'
               height='420'
-              className={classnames(styles.card, styles.cardBack, styles[`card${index}`])}
-            />
-          );
-        })}
-
-        {/* This map will render card #2 */}
-
-        {visibleCards.map((card, index) => {
-          return (
-            <Image
-              key={`Card-${card.id}`}
-              src={index !== 2 ? card.back : card.image}
-              alt={`Card ${index}`}
-              width='280'
-              height='420'
-              className={classnames(styles.card, styles.cardFront, styles[`card${index}`])}
+              className={classnames(styles.card, styles[`card${index}`])}
             />
           );
         })}
@@ -127,13 +100,3 @@ const Cards = ({ slides }: { slides: any }) => {
 };
 
 export default Cards;
-
-{/* TO DO:
-
-1) create div for full card
-2) create individual html elements for front and back of the card
-so the flip looks right
-3) when the card is fully finished flippin then switch the image to the gif
-4) make sure the image isn't flipped incorrectly
-
-*/}
