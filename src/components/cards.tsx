@@ -57,17 +57,10 @@ const Cards = ({ slides }: { slides: any }) => {
           onClick={prevSlide}
         />
 
-        {/* 
-     
-        Card #2 is the only card that needs to have the front and back rendered.
-        When the button is pressed card #2 needs to first show the back image and then
-        flip to the front. 
-
-        I think that the problem is the with the src of the card. 
-        I think that there needs to be a larger if statment 
-        that is then passed into the src as a variable instead of handling the
-        if function within the src itself.
-
+        {/* This Map currently displays all the cards
+          We need to display Card2 as a separate div with its own class
+          maybe we can use a second map for this?
+      
       */}
 
         <div className={styles.cardContainer}>
