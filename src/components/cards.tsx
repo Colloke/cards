@@ -61,6 +61,7 @@ const Cards = ({ slides }: { slides: any }) => {
           onClick={nextSlide}
         />
 
+        <div className={styles.cardContainer}>
         {visibleCards.map((card, index) => {
           return (
             <Image
@@ -73,7 +74,8 @@ const Cards = ({ slides }: { slides: any }) => {
             />
           );
         })}
-
+        </div>
+        
         {textData.map((text, index) => {
           return (
             <div
