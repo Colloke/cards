@@ -9,8 +9,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
-  /* For the 3D flip effect */
   perspective: 1000px;
 }
 
@@ -58,6 +56,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  transform-style: preserve-3d; // Placing this here causes clipping
 }
 
 .card {
@@ -75,9 +75,7 @@
   border-radius: 15px;
   transform-origin: 50% 200%;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1.2);
-
-  /* For the 3D flip effect */
-  transform-style: preserve-3d;
+   /* For the 3D flip effect */
 }
 
 .card0 {
@@ -90,7 +88,7 @@
 
 .card2 {
   --width: 22em;
-  z-index: 2;
+  z-index: 3;
 
   /* FOR THE FLIP ANIMATION */
   transform: rotateY(var(--flipDirection));
@@ -99,7 +97,7 @@
 
 .card3 {
   transform: rotate(15deg);
-  z-index: 1;
+  z-index: 2;
 }
 
 .card4 {
