@@ -54,6 +54,22 @@ const Cards = ({ slides }: { slides: any }) => {
           onClick={nextSlide}
         />
 
+      {/* 
+     
+     I need to have a container div so that the front and back can be rendered
+     at the same time. 
+
+     The problem is that I don't know the best way to display the back of the cards
+     for all the cards but card2 and the front only for card2.
+
+    When a button is clicked it needs to move card2 into place on it's
+    back side and then flip it over to the front.
+    
+    I think this means that I only need to render the front and back
+    for the active card and leave the other ones as is.
+
+      */}
+
         <div className={styles.cardContainer}>
         {visibleCards.map((card, index) => {
           return (
@@ -63,7 +79,20 @@ const Cards = ({ slides }: { slides: any }) => {
               alt={`Card ${index}`}
               width='280'
               height='420'
-              className={classnames(styles.card, styles[`card${index}`])}
+              className={classnames(styles.card, styles.cardBack, styles[`card${index}`])}
+            />
+          );
+        })}
+
+        {visibleCards.map((card, index) => {
+          return (
+            <Image
+              key={`Card-${card.id}`}
+              src={index !== 2 ? card.back : card.image}
+              alt={`Card ${index}`}
+              width='280'
+              height='420'
+              className={classnames(styles.card, styles.cardFront, styles[`card${index}`])}
             />
           );
         })}
