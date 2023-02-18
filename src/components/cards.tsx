@@ -39,6 +39,8 @@ const Cards = ({ slides }: { slides: any }) => {
 
   const visibleCards = calculateVisibleCardArray(cardData, current);
 
+  const transtion = document.querySelector('.transition');
+
   return (
     <>
       <section className={styles.container}>
