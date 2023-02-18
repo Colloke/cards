@@ -60,14 +60,15 @@ const Cards = ({ slides }: { slides: any }) => {
 
       {/* 
      
-        Card #2 is the only card that needs to have the front and back rendered.
-        When the button is pressed card #2 needs to first show the back image and then
-        flip to the front. 
+      Maps are like the forEach() method. 
+      They iterate over an array and perform a function on each element.
 
-        I think that the problem is the with the src of the card. 
-        I think that there needs to be a larger if statment 
-        that is then passed into the src as a variable instead of handling the
-        if function within the src itself.
+      These maps are interating over the images in the visibleCards
+      array and rendering the images to the page.
+
+      So I think what I need to do is to move card2 outside of the map
+      and then render it in the middle of the other two cards. So it can have 
+      it's own html to render the front and back
 
       */}
 
