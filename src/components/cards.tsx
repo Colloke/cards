@@ -96,11 +96,10 @@ const Cards = ({ slides }: { slides: any }) => {
 
 export default Cards;
 
-{/*
+{/* TO DO:
 
-TO DO:
-
-If prevSlide is selected then flip the card 180 deg
-If nextSlide is selected then flip the card -180 deg
+1) create div for full card
+2) create individual html elements for front and back of the card
+so the flip looks right
 
 */}
