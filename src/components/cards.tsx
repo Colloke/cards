@@ -6,9 +6,6 @@ import { textData } from "./cardData";
 import classnames from "classnames";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
-
-// Card data is an array of objects with the following properties:
-
 export const calculateVisibleCardArray = (
   cardData: any[],
   selectedIndex: number
@@ -21,8 +18,6 @@ export const calculateVisibleCardArray = (
   }
   return visibleCardArray;
 };
-
-// Logic for the cards:
 
 const Cards = ({ slides }: { slides: any }) => {
   const [current, setCurrent] = useState(2);
@@ -44,8 +39,6 @@ const Cards = ({ slides }: { slides: any }) => {
 
   const visibleCards = calculateVisibleCardArray(cardData, current);
 
-// JSX for the cards:
-
   return (
     <>
       <section className={styles.container}>
@@ -62,10 +55,6 @@ const Cards = ({ slides }: { slides: any }) => {
         />
 
         <div className={styles.cardContainer}>
-
-        // Need to figure out how to render two sets of cards here
-        // One for the front and one for the back
-
         {visibleCards.map((card, index) => {
           return (
             <Image
