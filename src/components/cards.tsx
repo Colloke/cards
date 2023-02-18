@@ -68,7 +68,7 @@ const Cards = ({ slides }: { slides: any }) => {
 
       So I think what I need to do is to move card2 outside of the map
       and then render it in the middle of the other two cards. So it can have 
-      it's own html to render the front and back
+      it's own html to render the front and back.
 
       */}
 
