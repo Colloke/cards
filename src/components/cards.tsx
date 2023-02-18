@@ -30,16 +30,14 @@ const Cards = ({ slides }: { slides: any }) => {
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
-    document.documentElement.style.setProperty('--flipDirection', '180deg')
+    document.documentElement.style.setProperty('--flipDirection', '180deg');
   };
 
   if (!Array.isArray(cardData) || cardData.length <= 0) {
     return null;
-  }
+  };
 
   const visibleCards = calculateVisibleCardArray(cardData, current);
-
-  const transtion = document.querySelector('.transition');
 
   return (
     <>
