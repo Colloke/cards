@@ -101,5 +101,6 @@ export default Cards;
 1) create div for full card
 2) create individual html elements for front and back of the card
 so the flip looks right
+3) when the card is fully finished flippin then switch the image to the gif
 
 */}
