@@ -27,38 +27,37 @@ const Cards = ({ slides }: { slides: any }) => {
     // Switch all the cards up one
     setCurrent(current === length - 1 ? 0 : current + 1);
     // Handle the card flip direction
-    document.documentElement.style.setProperty('--flipDirection', '-180deg')
+    document.documentElement.style.setProperty("--flipDirection", "180deg");
   };
 
   const prevSlide = () => {
     // Switch all the cards down one
     setCurrent(current === 0 ? length - 1 : current - 1);
     // Handle the card flip direction
-    document.documentElement.style.setProperty('--flipDirection', '180deg');
+    document.documentElement.style.setProperty("--flipDirection", "180deg");
   };
 
   if (!Array.isArray(cardData) || cardData.length <= 0) {
     return null;
-  };
+  }
 
   const visibleCards = calculateVisibleCardArray(cardData, current);
 
   return (
     <>
       <section className={styles.container}>
-
         <FaArrowAltCircleLeft
           id="leftArrow"
           className={classnames(styles.arrow, styles.leftarrow)}
-          onClick={prevSlide}
+          onClick={nextSlide}
         />
         <FaArrowAltCircleRight
           id="rightArrow"
           className={classnames(styles.arrow, styles.rightarrow)}
-          onClick={nextSlide}
+          onClick={prevSlide}
         />
 
-      {/* 
+        {/* 
      
         Card #2 is the only card that needs to have the front and back rendered.
         When the button is pressed card #2 needs to first show the back image and then
@@ -72,20 +71,37 @@ const Cards = ({ slides }: { slides: any }) => {
       */}
 
         <div className={styles.cardContainer}>
-        {visibleCards.map((card, index) => {
-          return (
-            <Image
-              key={`Card-${card.id}`}
-              src={index !== 2 ? card.back : card.image}
-              alt={`Card ${index}`}
-              width='280'
-              height='420'
-              className={classnames(styles.card, styles[`card${index}`])}
-            />
-          );
-        })}
+          {visibleCards.map((card, index) => {
+            return (
+              <div
+                key={`Card-${card.id}`}
+                className={classnames(
+                  styles.card,
+                  {
+                    [styles.flipCard]: index === 2,
+                  },
+                  styles[`card${index}`]
+                )}
+              >
+                <Image
+                  src={card.back}
+                  alt={`Card ${index}`}
+                  width="352"
+                  height="493"
+                  className={styles.cardBack}
+                />
+                <Image
+                  src={card.image}
+                  alt={`Card ${index}`}
+                  width="352"
+                  height="493"
+                  className={styles.cardFront}
+                />
+              </div>
+            );
+          })}
         </div>
-        
+
         {textData.map((text, index) => {
           return (
             <div
