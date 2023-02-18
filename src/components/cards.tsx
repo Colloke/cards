@@ -62,6 +62,10 @@ const Cards = ({ slides }: { slides: any }) => {
         />
 
         <div className={styles.cardContainer}>
+
+        // Need to figure out how to render two sets of cards here
+        // One for the front and one for the back
+
         {visibleCards.map((card, index) => {
           return (
             <Image
