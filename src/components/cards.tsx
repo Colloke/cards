@@ -58,16 +58,10 @@ const Cards = ({ slides }: { slides: any }) => {
           onClick={nextSlide}
         />
 
-      {/* 
-     
-      Maps are like the forEach() method. 
-      They iterate over an array and perform a function on each element.
-
-      These maps are interating over the images in the visibleCards
-      array and rendering the images to the page.
-
-      Maybe have two maps, one for all cards but 2 and one for card2?
-
+      {/* This Map currently displays all the cards
+          We need to display Card2 as a separate div with its own class
+          maybe we can use a second map for this?
+      
       */}
 
         <div className={styles.cardContainer}>
