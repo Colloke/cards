@@ -60,7 +60,10 @@ const Cards = ({ slides }: { slides: any }) => {
         When the button is pressed card #2 needs to first show the back image and then
         flip to the front. 
 
-        Unsure how to accomplish this.
+        I think that the problem is the with the src of the card. 
+        I think that there needs to be a larger if statment 
+        that is then passed into the src as a variable instead of handling the
+        if function within the src itself.
 
       */}
 

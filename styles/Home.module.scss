@@ -83,7 +83,6 @@
 .card2 {
   --width: 22em;
   z-index: 3;
-
   /* FOR THE FLIP ANIMATION */
   transform: rotateY(var(--flipDirection));
   transition: transform 1s;
