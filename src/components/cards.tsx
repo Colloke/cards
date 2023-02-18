@@ -30,12 +30,12 @@ const Cards = ({ slides }: { slides: any }) => {
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-    // update --x css variable to -180deg
+    document.documentElement.style.setProperty('--flipDirection', '-180deg')
   };
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
-    // update --x css variable to 180deg
+    document.documentElement.style.setProperty('--flipDirection', '180deg')
   };
 
   if (!Array.isArray(cardData) || cardData.length <= 0) {

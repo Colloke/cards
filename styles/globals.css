@@ -1,3 +1,7 @@
+:root {
+  --flipDirection: 0deg;
+}
+
 body {
   background-color: #000;
   overflow: hidden;
