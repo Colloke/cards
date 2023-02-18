@@ -68,6 +68,8 @@ const Cards = ({ slides }: { slides: any }) => {
     I think this means that I only need to render the front and back
     for the active card and leave the other ones as is.
 
+    I think that having two maps is necessary but I'm not sure.
+
       */}
 
         <div className={styles.cardContainer}>
