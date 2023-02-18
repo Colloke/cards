@@ -37,7 +37,7 @@
 }
 
 .card {
-  position: absolute; 
+  position: absolute;
   --width: 17em;
   --height: calc(var(--width) * 1.4);
   width: var(--width);
@@ -46,7 +46,7 @@
   box-shadow: 0 0 4px #0007;
   border-radius: 15px;
   transform-origin: 50% 200%;
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1.2);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .card0 {
@@ -78,7 +78,6 @@
   color: black;
   z-index: 10;
 }
-
 
 /* Smaller Screens */
 @media only screen and (max-width: 1024px) {
