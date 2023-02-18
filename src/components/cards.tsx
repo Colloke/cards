@@ -66,9 +66,7 @@ const Cards = ({ slides }: { slides: any }) => {
       These maps are interating over the images in the visibleCards
       array and rendering the images to the page.
 
-      So I think what I need to do is to move card2 outside of the map
-      and then render it in the middle of the other two cards. So it can have 
-      it's own html to render the front and back.
+      Maybe have two maps, one for all cards but 2 and one for card2?
 
       */}
 
