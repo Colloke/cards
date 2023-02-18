@@ -24,12 +24,16 @@ const Cards = ({ slides }: { slides: any }) => {
   const length = cardData.length;
 
   const nextSlide = () => {
+    // Switch all the cards up one
     setCurrent(current === length - 1 ? 0 : current + 1);
+    // Handle the card flip direction
     document.documentElement.style.setProperty('--flipDirection', '-180deg')
   };
 
   const prevSlide = () => {
+    // Switch all the cards down one
     setCurrent(current === 0 ? length - 1 : current - 1);
+    // Handle the card flip direction
     document.documentElement.style.setProperty('--flipDirection', '180deg');
   };
 
