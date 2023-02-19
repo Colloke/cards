@@ -1,4 +1,8 @@
+:root {
+    --flipDirection: 180deg;
+}
+
 body {
-  background-color: #000;
-  overflow: hidden;
+    background-color: #000;
+    overflow: hidden;
 }

@@ -1,38 +1,46 @@
 {
-  "name": "cards",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@next/font": "13.1.4",
-    "@types/node": "^18.11.18",
-    "classnames": "^2.3.2",
-    "eslint": "8.32.0",
-    "eslint-config-next": "13.1.4",
-    "next": "^13.1.4",
-    "react": "18.2.0",
-    "react-arrow-nav": "^0.0.2",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.7.1",
-    "readfilesync": "^1.1.5",
-    "styled-components": "^5.3.6",
-    "swr": "^2.0.3",
-    "typescript": "4.9.4",
-    "uuid": "^9.0.0",
-    "wait-for-element-transition": "^3.3.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@types/uuid": "^9.0.0",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "raw-loader": "^4.0.2",
-    "tailwindcss": "^3.2.4"
-  }
+    "name": "cards",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "format:fix": "prettier --write ."
+    },
+    "dependencies": {
+        "@next/font": "13.1.4",
+        "@types/node": "^18.11.18",
+        "classnames": "^2.3.2",
+        "eslint": "8.32.0",
+        "eslint-config-next": "13.1.4",
+        "next": "^13.1.4",
+        "prettier": "^2.8.4",
+        "react": "18.2.0",
+        "react-arrow-nav": "^0.0.2",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.7.1",
+        "react-swipeable": "^7.0.0",
+        "readfilesync": "^1.1.5",
+        "sass": "^1.58.2",
+        "scss": "^0.2.4",
+        "styled-components": "^5.3.6",
+        "swr": "^2.0.3",
+        "typescript": "4.9.4",
+        "uuid": "^9.0.0",
+        "wait-for-element-transition": "^3.3.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "autoprefixer": "^10.4.13",
+        "css-loader": "^6.7.3",
+        "postcss": "^8.4.21",
+        "raw-loader": "^4.0.2",
+        "sass-loader": "^13.2.0",
+        "style-loader": "^3.3.1",
+        "tailwindcss": "^3.2.4",
+        "webpack-cli": "^5.0.1"
+    }
 }
