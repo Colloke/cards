@@ -55,7 +55,6 @@ const Cards = ({ slides }: { slides: any }) => {
                     className={classnames(styles.arrow, styles.rightarrow)}
                     onClick={prevSlide}
                 />
-                <div className={styles.cardContainer}>
                     {visibleCards.map((card, index) => {
                         return (
                             <div
@@ -85,7 +84,6 @@ const Cards = ({ slides }: { slides: any }) => {
                             </div>
                         )
                     })}
-                </div>
 
                 {textData.map((text, index) => {
                     return (
