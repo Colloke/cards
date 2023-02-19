@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaWindowClose } from 'react-icons/fa'
 
 export const calculateVisibleCardArray = (
     cardData: any[],
