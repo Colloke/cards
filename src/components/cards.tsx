@@ -55,18 +55,6 @@ const Cards = ({ slides }: { slides: any }) => {
                     className={classnames(styles.arrow, styles.rightarrow)}
                     onClick={prevSlide}
                 />
-
-                {/* This Map currently displays all the cards
-          We need to display Card2 as a separate div with its own class
-          maybe we can use a second map for this?
-      
-          Alternatively, I just thought of this. Since a map is like a
-          for each function. We could just render both the front
-          and the back of each card. Then when the second card flips it
-          doesn't have to do anything extra.
-
-      */}
-
                 <div className={styles.cardContainer}>
                     {visibleCards.map((card, index) => {
                         return (
