@@ -1,0 +1,148 @@
+.container {
+    background-color: #544c4c;
+    background: #cdcdcd;
+    border-radius: 50%;
+    height: 80vh;
+    width: 70vw;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 
+
+        FOR THE ARROWS:
+
+*/
+
+.arrow {
+    position: absolute;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.rightarrow {
+    right: 1vw;
+}
+
+.leftarrow {
+    left: 1vw;
+}
+
+.rightarrow:hover {
+    transform: scale(1.1);
+}
+
+.leftarrow:hover {
+    transform: scale(1.1);
+}
+
+/* 
+
+        FOR THE CARDS:
+
+*/
+
+.cardContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.card {
+    position: absolute;
+    /* Make the card images card shaped */
+    --width: 17em;
+    --height: calc(var(--width) * 1.4);
+    width: var(--width);
+    height: var(--height);
+    border: 10px solid #f2f2f2;
+    box-shadow: 0 0 4px #0007;
+    border-radius: 15px;
+    transform-origin: 50% 200%;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1.2);
+}
+
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.cardFront {
+    transform: rotateY(180deg);
+}
+
+.card0 {
+    transform: rotate(-25deg);
+}
+
+.card1 {
+    transform: rotate(-15deg);
+}
+
+.flipCard {
+    /* FOR THE FLIP ANIMATION */
+    transform: rotateY(var(--flipDirection));
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card2 {
+    --width: 22em;
+    z-index: 3;
+}
+
+.card3 {
+    transform: rotate(15deg);
+    z-index: 2;
+}
+
+.card4 {
+    transform: rotate(25deg);
+}
+
+/* 
+
+        FOR THE TEXT:
+
+*/
+
+.text {
+    position: relative;
+    top: 30vh;
+    text-align: center;
+    color: black;
+    z-index: 10;
+}
+
+/* Smaller Screens */
+@media only screen and (max-width: 1024px) {
+    /* Remove container */
+    .container {
+        background: black;
+    }
+    /* Make text white and move it down */
+    .text {
+        color: white;
+        top: 50vh;
+    }
+    /* Remove first and last card */
+    .card0 {
+        opacity: 0;
+    }
+    .card4 {
+        opacity: 0;
+    }
+}
