@@ -51,6 +51,13 @@ const Cards = ({ slides }: { slides: any }) => {
                 dragConstraints={{ left: 0, right: 0 }}
                 dragMomentum={false}
                 dragElastic={0}
+                onDragEnd={(event, info) => {
+                    if (info.offset.x > 0) {
+                        prevSlide()
+                    } else {
+                        nextSlide()
+                    }
+                }}
             >
                 <FaArrowAltCircleLeft
                     id="leftArrow"
