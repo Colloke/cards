@@ -45,7 +45,13 @@ const Cards = ({ slides }: { slides: any }) => {
 
     return (
         <>
-            <section className={styles.container}>
+            <motion.div 
+                className={styles.container}
+                drag='x'
+                dragConstraints={{ left: 0, right: 0 }}
+                dragMomentum={false}
+                dragElastic={0}
+            >
                 <FaArrowAltCircleLeft
                     id="leftArrow"
                     className={classnames(styles.arrow, styles.leftarrow)}
@@ -103,7 +109,7 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-            </section>
+            </motion.div>
         </>
     )
 }
