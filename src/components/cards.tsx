@@ -109,3 +109,10 @@ const Cards = ({ slides }: { slides: any }) => {
 }
 
 export default Cards
+
+
+// For drag:
+
+// Framer motion drag option is what we're going to use. When I apply it to the cards they are able to be dragged all around. 
+// I'm thinking maybe I need another inner container for the cards
+// so that way they aren't able to be dragged individually. I'm not sure how to do that though.
