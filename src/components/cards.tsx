@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaWindowClose } from 'react-icons/fa'
+import { motion } from 'framer-motion';
 
 export const calculateVisibleCardArray = (
     cardData: any[],
