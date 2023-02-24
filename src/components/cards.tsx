@@ -45,7 +45,7 @@ const Cards = ({ slides }: { slides: any }) => {
 
     return (
         <>
-            <section className={styles.container}>
+            <motion.div drag className={styles.container}>
                 <FaArrowAltCircleLeft
                     id="leftArrow"
                     className={classnames(styles.arrow, styles.leftarrow)}
@@ -103,7 +103,7 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-            </section>
+            </motion.div>
         </>
     )
 }
