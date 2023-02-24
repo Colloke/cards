@@ -50,6 +50,7 @@ const Cards = ({ slides }: { slides: any }) => {
                 drag='x'
                 dragConstraints={{ left: 0, right: 0 }}
                 dragMomentum={false}
+                dragElastic={0}
             >
                 <FaArrowAltCircleLeft
                     id="leftArrow"
