@@ -103,7 +103,7 @@
 
 .card2 {
     --width: 22em;
-    z-index: 3;
+    z-index: 4;
 }
 
 .card3 {
@@ -129,22 +129,27 @@
     z-index: 10;
 }
 
-/* Smaller Screens */
 @media only screen and (max-width: 1024px) {
-    /* Remove container */
     .container {
         background: black;
     }
-    /* Make text white and move it down */
     .text {
         color: white;
         top: 50vh;
     }
-    /* Remove first and last card */
-    .card0 {
+   .card0 {
+        opacity: 0;
+    }
+    .card1 {
+        opacity: 0;
+    }
+    .card3 {
         opacity: 0;
     }
     .card4 {
         opacity: 0;
+    }
+    .arrow {
+        display: none;
     }
 }
