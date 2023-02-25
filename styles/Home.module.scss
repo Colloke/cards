@@ -103,7 +103,7 @@
 
 .card2 {
     --width: 22em;
-    z-index: 3;
+    z-index: 4;
 }
 
 .card3 {
@@ -146,5 +146,9 @@
     }
     .card4 {
         opacity: 0;
+    }
+    .card2 {
+        position: fixed;
+        z-index: 15;
     }
 }
