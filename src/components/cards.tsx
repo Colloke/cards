@@ -43,6 +43,9 @@ const Cards = ({ slides }: { slides: any }) => {
 
     const visibleCards = calculateVisibleCardArray(cardData, current)
 
+    // Problem: If you try to swipe on the cards it won't activate the swipe function. Need to figure out how to have the framer-motion drag method effect
+    // the child card element so you can swipe on both.
+    
     return (
         <>
             <motion.div 
