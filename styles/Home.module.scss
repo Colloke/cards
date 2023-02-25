@@ -12,6 +12,17 @@
     perspective: 1000px;
 }
 
+.swipeContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 100%;
+    z-index: 20;
+}
+
 /* 
 
         FOR THE ARROWS:
@@ -22,7 +33,7 @@
     position: absolute;
     font-size: 3rem;
     color: #fff;
-    z-index: 10;
+    z-index: 25;
     cursor: pointer;
     user-select: none;
 }
