@@ -43,24 +43,10 @@ const Cards = ({ slides }: { slides: any }) => {
 
     const visibleCards = calculateVisibleCardArray(cardData, current)
 
-    // Problem: If you try to swipe on the cards it won't activate the swipe function. Need to figure out how to have the framer-motion drag method effect
-    // the child card element so you can swipe on both.
-    
     return (
         <>
-            <motion.div 
+            <div 
                 className={styles.container}
-                drag='x'
-                dragConstraints={{ left: 0, right: 0 }}
-                dragMomentum={false}
-                dragElastic={0}
-                onDragEnd={(event, info) => {
-                    if (info.offset.x > 0) {
-                        prevSlide()
-                    } else {
-                        nextSlide()
-                    }
-                }}
             >
                 <FaArrowAltCircleLeft
                     id="leftArrow"
@@ -119,7 +105,23 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-            </motion.div>
+                {/* This div is to handle the swipe animation */}
+                <motion.div
+                    className={styles.swipeContainer}
+                    drag='x'
+                    dragMomentum={false}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0}
+                    onDragEnd={(event, info) => {
+                        if (info.offset.x > 0) {
+                            prevSlide()
+                        } else {
+                            nextSlide()
+                        }
+                    }}
+                >
+                </motion.div>
+            </div>
         </>
     )
 }
