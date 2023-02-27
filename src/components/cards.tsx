@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaWindowClose } from 'react-icons/fa'
+import { motion } from 'framer-motion';
 
 export const calculateVisibleCardArray = (
     cardData: any[],
@@ -44,7 +45,9 @@ const Cards = ({ slides }: { slides: any }) => {
 
     return (
         <>
-            <section className={styles.container}>
+            <div 
+                className={styles.container}
+            >
                 <FaArrowAltCircleLeft
                     id="leftArrow"
                     className={classnames(styles.arrow, styles.leftarrow)}
@@ -102,7 +105,23 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-            </section>
+                {/* This div is to handle the swipe animation */}
+                <motion.div
+                    className={styles.swipeContainer}
+                    drag='x'
+                    dragMomentum={false}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0}
+                    onDragEnd={(event, info) => {
+                        if (info.offset.x > 0) {
+                            prevSlide()
+                        } else {
+                            nextSlide()
+                        }
+                    }}
+                >
+                </motion.div>
+            </div>
         </>
     )
 }
