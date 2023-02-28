@@ -6,9 +6,7 @@ A simple React and NextJs component.
 
 An in-depth paragraph about your project and overview of use.
 
-## Help
-
-Any advise for common problems or issues.
+## Start Dev Version
 ```
 npm run dev
 ```
