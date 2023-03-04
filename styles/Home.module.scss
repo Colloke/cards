@@ -10,12 +10,11 @@
     background-color: #544c4c;
     background: #cdcdcd;
     border-radius: 50%;
-    height: 80%; // I think it's moving because the height and width are changing based on the screen size. I think that they need to stay the same but the size needs to change
-    width: 70%;
+    height: 800px;
+    width: 1200px;
     display: flex;
     position: fixed;
     justify-content: center;
-    margin-left: 13%;
     align-items: center;
     perspective: 1000px;
 }
@@ -149,6 +148,9 @@
     .container {
         background-color: black;
         border-radius: 0%;
+        height: 100%;
+        width: 100%;
+        margin: 0%;
     }
     .text {
         color: white;
