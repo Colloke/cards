@@ -129,6 +129,14 @@
     z-index: 10;
 }
 
+/* 
+
+        MOBILE:
+
+*/
+
+// Todo: check how it looks on ipad size screens
+
 @media only screen and (max-width: 1024px) {
     .container {
         background-color: black;
