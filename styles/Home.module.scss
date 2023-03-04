@@ -7,6 +7,7 @@
     display: flex;
     position: fixed;
     justify-content: center;
+    margin-left: 13%; // This part sucks and need to be more responsive instead of locked at 13%
     align-items: center;
     perspective: 1000px;
 }
@@ -130,13 +131,15 @@
 
 @media only screen and (max-width: 1024px) {
     .container {
-        background: black;
-        overflow: hidden;
+        background-color: black;
         border-radius: 0%;
     }
     .text {
         color: white;
         top: 50vh;
+    }
+    .card {
+        --width: 15em;
     }
    .card0 {
         opacity: 0;
