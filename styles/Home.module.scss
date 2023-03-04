@@ -1,5 +1,3 @@
-// Right now the container changes shape when the screen size changes. I want it to stay the same shape and just get smaller/bigger.
-
 /* 
 
         FOR THE CONTAINER:
@@ -141,9 +139,6 @@
         MOBILE:
 
 */
-
-// Todo: check how it looks on ipad size screens
-// Also need to add another break point
 
 @media only screen and (max-width: 1024px) {
     .container {
