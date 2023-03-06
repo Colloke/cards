@@ -171,6 +171,20 @@
     }
 }
 
+@media only screen and (max-height: 630px){
+    .container {
+        background-color: black;
+        scale: 78%;
+    }
+    .text {
+        color: white;
+        top: 200px;
+    }
+    .card {
+        --width: 10em;
+    }
+}
+
 /* 
 
         TABLETS:
