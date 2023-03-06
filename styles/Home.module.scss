@@ -174,7 +174,7 @@
 @media only screen and (max-height: 630px){
     .container {
         background-color: black;
-        scale: 78%;
+        scale: 80%;
     }
     .text {
         color: white;
@@ -182,6 +182,21 @@
     }
     .card {
         --width: 10em;
+    }
+   .card0 {
+        opacity: 0;
+    }
+    .card1 {
+        opacity: 0;
+    }
+    .card3 {
+        opacity: 0;
+    }
+    .card4 {
+        opacity: 0;
+    }
+    .arrow {
+        display: none;
     }
 }
 
