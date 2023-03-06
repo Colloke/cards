@@ -10,10 +10,8 @@
     border-radius: 50%;
     height: 800px;
     width: 1200px;
+    position: absolute;
     display: flex;
-    position: fixed;
-    left: 18%;
-    top: 10%;
     justify-content: center;
     align-items: center;
     perspective: 1000px;
@@ -142,14 +140,12 @@
 
 */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 630px) {
     .container {
         background-color: black;
-        border-radius: 0%;
         height: 100%;
         width: 100%;
-        top: -50px;
-        left: -1px;
+        position:fixed;
     }
     .text {
         color: white;
@@ -180,3 +176,27 @@
         TABLETS:
 
 */
+
+@media only screen and (max-width: 1248px) {
+    .container {
+        background-color: black;
+        height: 100%;
+        width: 100%;
+    }
+    .text {
+        color: white;
+        top: 200px;
+    }
+    .card {
+        --width: 15em;
+    }
+   .card0 {
+        opacity: 0;
+    }
+    .card4 {
+        opacity: 0;
+    }
+    .arrow {
+        margin: 20px;
+    }
+}
