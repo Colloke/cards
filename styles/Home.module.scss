@@ -25,7 +25,7 @@
     width: 100%;
     margin: 0 auto;
     opacity: 100%;
-    z-index: 20;
+    z-index: 200;
 }
 
 /* 
@@ -140,7 +140,7 @@
 
 */
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 630px){
     .container {
         background-color: black;
         height: 100%;
@@ -177,7 +177,7 @@
 
 */
 
-@media only screen and (max-width: 1248px) {
+@media only screen and (max-width: 1248px){
     .container {
         background-color: black;
         height: 100%;
@@ -192,6 +192,9 @@
     }
    .card0 {
         opacity: 0;
+    }
+    .card2 {
+        z-index: 100;
     }
     .card4 {
         opacity: 0;
