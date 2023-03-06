@@ -55,12 +55,16 @@ const Cards = ({ slides }: { slides: any }) => {
 
     return (
         <>
+
+        {/*Handle Container*/}
             <div 
                 className={styles.container}
                 onKeyDown={handleArrowKey}
                 role="button"
                 tabIndex={0}
             >
+
+                {/*Handle Buttons*/}
                 <FaArrowAltCircleLeft
                     id="leftArrow"
                     role="button"
@@ -77,6 +81,8 @@ const Cards = ({ slides }: { slides: any }) => {
                     className={classnames(styles.arrow, styles.rightarrow)}
                     onClick={prevSlide}
                 />
+
+                {/*Handle Images*/}
                     {visibleCards.map((card, index) => {
                         return (
                             <div
@@ -106,7 +112,8 @@ const Cards = ({ slides }: { slides: any }) => {
                             </div>
                         )
                     })}
-
+                    
+                {/*Handle Text*/}
                 {textData.map((text, index) => {
                     return (
                         <div
@@ -124,7 +131,8 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-                {/* This div is to handle the swipe animation */}
+
+                {/*Handle Swipe*/}
                 <motion.div
                     className={styles.swipeContainer}
                     drag='x'
