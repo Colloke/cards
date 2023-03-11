@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaWindowClose } from 'react-icons/fa'
+import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from 'react-icons/bs'
 import { motion } from 'framer-motion';
 
 export const calculateVisibleCardArray = (
@@ -65,7 +65,7 @@ const Cards = ({ slides }: { slides: any }) => {
             >
 
                 {/*Handle Buttons*/}
-                <FaArrowAltCircleLeft
+                <BsFillArrowLeftCircleFill
                     id="leftArrow"
                     role="button"
                     tabIndex={0}
@@ -73,7 +73,7 @@ const Cards = ({ slides }: { slides: any }) => {
                     className={classnames(styles.arrow, styles.leftarrow)}
                     onClick={nextSlide}
                 />
-                <FaArrowAltCircleRight
+                <BsFillArrowRightCircleFill
                     id="rightArrow"
                     role="button"
                     tabIndex={0}
