@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaWindowClose } from 'react-icons/fa'
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { motion } from 'framer-motion';
 
 export const calculateVisibleCardArray = (
@@ -55,13 +55,17 @@ const Cards = ({ slides }: { slides: any }) => {
 
     return (
         <>
+
+        {/*Handle Container*/}
             <div 
                 className={styles.container}
                 onKeyDown={handleArrowKey}
                 role="button"
                 tabIndex={0}
             >
-                <FaArrowAltCircleLeft
+
+                {/*Handle Buttons*/}
+                <MdKeyboardArrowLeft
                     id="leftArrow"
                     role="button"
                     tabIndex={0}
@@ -69,7 +73,7 @@ const Cards = ({ slides }: { slides: any }) => {
                     className={classnames(styles.arrow, styles.leftarrow)}
                     onClick={nextSlide}
                 />
-                <FaArrowAltCircleRight
+                <MdKeyboardArrowRight
                     id="rightArrow"
                     role="button"
                     tabIndex={0}
@@ -77,6 +81,8 @@ const Cards = ({ slides }: { slides: any }) => {
                     className={classnames(styles.arrow, styles.rightarrow)}
                     onClick={prevSlide}
                 />
+
+                {/*Handle Images*/}
                     {visibleCards.map((card, index) => {
                         return (
                             <div
@@ -106,7 +112,8 @@ const Cards = ({ slides }: { slides: any }) => {
                             </div>
                         )
                     })}
-
+                    
+                {/*Handle Text*/}
                 {textData.map((text, index) => {
                     return (
                         <div
@@ -124,7 +131,8 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-                {/* This div is to handle the swipe animation */}
+
+                {/*Handle Swipe*/}
                 <motion.div
                     className={styles.swipeContainer}
                     drag='x'

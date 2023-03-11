@@ -5,12 +5,12 @@
 */
 
 .container {
+    position: absolute;
     background-color: #544c4c;
     background: #cdcdcd;
     border-radius: 50%;
-    height: 800px;
-    width: 1200px;
-    position: absolute;
+    height: 50rem;
+    width: 60rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,19 +36,21 @@
 
 .arrow {
     position: absolute;
-    font-size: 3rem;
-    color: #fff;
+    background: darkgrey;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #242424;
     z-index: 25;
     cursor: pointer;
     user-select: none;
 }
 
-.rightarrow {
-    right: 1vw;
+.leftarrow {
+    left: -1.5%;
 }
 
-.leftarrow {
-    left: 1vw;
+.rightarrow {
+    right: -1.5%;
 }
 
 .rightarrow:hover {
@@ -68,7 +70,7 @@
 .card {
     position: absolute;
     /* Make the card images card shaped */
-    --width: 17em;
+    --width: 19em;
     --height: calc(var(--width) * 1.4);
     width: var(--width);
     height: var(--height);
@@ -77,6 +79,7 @@
     border-radius: 15px;
     transform-origin: 50% 200%;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-bottom: 20%;
 }
 
 .cardFront,
@@ -128,10 +131,25 @@
 
 .text {
     position: relative;
-    top: 350px;
     text-align: center;
     color: black;
     z-index: 10;
+    top: 15rem;
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+// Position on laptops
+
+@media only screen and (min-width: 1024px){
+    .container {
+        left: 20%;
+        top: 10%;
+    }
 }
 
 /* 
