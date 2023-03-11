@@ -72,6 +72,7 @@ const Cards = ({ slides }: { slides: any }) => {
                     onKeyDown={handleEnterKey}
                     className={classnames(styles.arrow, styles.leftarrow)}
                     onClick={nextSlide}
+                    fill="red"
                 />
                 <BsFillArrowRightCircleFill
                     id="rightArrow"
