@@ -36,19 +36,21 @@
 
 .arrow {
     position: absolute;
-    font-size: 3rem;
-    color: #61605d;
+    background: darkgrey;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #242424;
     z-index: 25;
     cursor: pointer;
     user-select: none;
 }
 
 .leftarrow {
-    left: -2.5%;
+    left: -1.5%;
 }
 
 .rightarrow {
-    right: -2.5%;
+    right: -1.5%;
 }
 
 .rightarrow:hover {

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
-import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from 'react-icons/bs'
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { motion } from 'framer-motion';
 
 export const calculateVisibleCardArray = (
@@ -65,16 +65,15 @@ const Cards = ({ slides }: { slides: any }) => {
             >
 
                 {/*Handle Buttons*/}
-                <BsFillArrowLeftCircleFill
+                <MdKeyboardArrowLeft
                     id="leftArrow"
                     role="button"
                     tabIndex={0}
                     onKeyDown={handleEnterKey}
                     className={classnames(styles.arrow, styles.leftarrow)}
                     onClick={nextSlide}
-                    fill="red"
                 />
-                <BsFillArrowRightCircleFill
+                <MdKeyboardArrowRight
                     id="rightArrow"
                     role="button"
                     tabIndex={0}
