@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { KeyboardEvent, useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { cardData, textData } from './cardData'
 import classnames from 'classnames'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft, FaWindowClose } from 'react-icons/fa'
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { motion } from 'framer-motion';
 
 export const calculateVisibleCardArray = (
@@ -22,6 +22,14 @@ export const calculateVisibleCardArray = (
 const Cards = ({ slides }: { slides: any }) => {
     const [current, setCurrent] = useState(2)
     const length = cardData.length
+
+    const handleArrowKey = (e: KeyboardEvent): void => {
+        e.key === 'ArrowRight' && prevSlide() 
+        e.key === 'ArrowLeft' && nextSlide()
+      }
+    const handleEnterKey = (e: KeyboardEvent): void => {
+        e.key === 'Enter' && nextSlide()
+    }
 
     const nextSlide = () => {
         // Switch all the cards up one
@@ -43,21 +51,38 @@ const Cards = ({ slides }: { slides: any }) => {
 
     const visibleCards = calculateVisibleCardArray(cardData, current)
 
+ 
+
     return (
         <>
+
+        {/*Handle Container*/}
             <div 
                 className={styles.container}
+                onKeyDown={handleArrowKey}
+                role="button"
+                tabIndex={0}
             >
-                <FaArrowAltCircleLeft
+
+                {/*Handle Buttons*/}
+                <MdKeyboardArrowLeft
                     id="leftArrow"
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={handleEnterKey}
                     className={classnames(styles.arrow, styles.leftarrow)}
                     onClick={nextSlide}
                 />
-                <FaArrowAltCircleRight
+                <MdKeyboardArrowRight
                     id="rightArrow"
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={handleEnterKey}
                     className={classnames(styles.arrow, styles.rightarrow)}
                     onClick={prevSlide}
                 />
+
+                {/*Handle Images*/}
                     {visibleCards.map((card, index) => {
                         return (
                             <div
@@ -87,7 +112,8 @@ const Cards = ({ slides }: { slides: any }) => {
                             </div>
                         )
                     })}
-
+                    
+                {/*Handle Text*/}
                 {textData.map((text, index) => {
                     return (
                         <div
@@ -105,7 +131,8 @@ const Cards = ({ slides }: { slides: any }) => {
                         </div>
                     )
                 })}
-                {/* This div is to handle the swipe animation */}
+
+                {/*Handle Swipe*/}
                 <motion.div
                     className={styles.swipeContainer}
                     drag='x'
